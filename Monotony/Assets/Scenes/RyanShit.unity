@@ -179,7 +179,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -389202237
+<<<<<<< Updated upstream
   m_SortingLayer: 0
+=======
+  m_SortingLayer: 5
+>>>>>>> Stashed changes
   m_SortingOrder: 0
   m_Sprite: {fileID: 1056027517, guid: 80bf55eb915ee4110a21be6111a2434a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -263,7 +267,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -483329359
+<<<<<<< Updated upstream
   m_SortingLayer: 0
+=======
+  m_SortingLayer: 1
+>>>>>>> Stashed changes
   m_SortingOrder: 0
   m_Sprite: {fileID: -1161031111, guid: 4058268afa59e4f0aa5884a1d56cd61e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -414,7 +422,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1630527127
+<<<<<<< Updated upstream
   m_SortingLayer: 0
+=======
+  m_SortingLayer: 4
+>>>>>>> Stashed changes
   m_SortingOrder: 0
   m_Sprite: {fileID: -1395253985, guid: 369d9347a555048769f44a5e1a2f2384, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -672,7 +684,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -516968273
+<<<<<<< Updated upstream
   m_SortingLayer: 0
+=======
+  m_SortingLayer: 2
+>>>>>>> Stashed changes
   m_SortingOrder: 0
   m_Sprite: {fileID: 61969256, guid: b4939a89083ee4648bd1252c8bb29ecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1334,7 +1350,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -516968273
+<<<<<<< Updated upstream
   m_SortingLayer: 0
+=======
+  m_SortingLayer: 2
+>>>>>>> Stashed changes
   m_SortingOrder: 1
   m_Sprite: {fileID: 1372153718, guid: 2990bc94fe7bb4440932996d7b15a90b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1436,7 +1456,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -483329359
+<<<<<<< Updated upstream
   m_SortingLayer: 0
+=======
+  m_SortingLayer: 1
+>>>>>>> Stashed changes
   m_SortingOrder: 1
   m_Sprite: {fileID: 10845807, guid: 0de42681f5c3440cb9034e5379d7ad89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1657,7 +1681,11 @@ SpriteRenderer:
   m_Size: {x: 11.58, y: 9.86}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+<<<<<<< Updated upstream
   m_WasSpriteAssigned: 1
+=======
+  m_WasSpriteAssigned: 0
+>>>>>>> Stashed changes
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1978768420 stripped

@@ -41,6 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Environment
+    uniqueID: 3811637937
+    locked: 0
+  - name: Characters
+    uniqueID: 3777999023
+    locked: 0
   - name: Eyes
     uniqueID: 2938027541
+    locked: 0
+  - name: Interactables
+    uniqueID: 2664440169
+    locked: 0
+  - name: UI
+    uniqueID: 3905765059
     locked: 0
