@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Scanner
   layers:
   - Default
   - TransparentFX
@@ -50,9 +51,9 @@ TagManager:
   - name: Eyes
     uniqueID: 2938027541
     locked: 0
-  - name: Interactables
-    uniqueID: 2664440169
-    locked: 0
   - name: UI
     uniqueID: 3905765059
+    locked: 0
+  - name: Interactables
+    uniqueID: 2664440169
     locked: 0

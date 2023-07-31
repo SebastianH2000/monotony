@@ -1,22 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 namespace RyansNamespace {
-    [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(BoxCollider2D))]
+    [RequireComponent(typeof(Bean))]
+    [RequireComponent(typeof(Rigidbody2D))]
     public class Drag : MonoBehaviour
     {
-        private enum State {
-            SCANNING,
-            DRAGGING
-        }
-
-        [Header("Bar Code")]
-        [SerializeField] private TextMeshProUGUI inputText;
-        [SerializeField] private string barCode;
-        private string input;
-
         [Header("Boundaries")]
         [SerializeField] private float minX;
         [SerializeField] private float maxX;
@@ -29,17 +20,20 @@ namespace RyansNamespace {
         private float velocity = 0f;
 
         private bool isDragging = false;
-        private bool isBarCodeShown = false;
+        private Bean bean;
+        private Rigidbody2D RB;
 
-        private State currentState = State.SCANNING;
-        private Animator AN;
+        private Vector3 mousePos;
+        private float offset;
 
         // Start is called before the first frame update
         void Start()
         {
             BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
-            AN = GetComponent<Animator>();
-            inputText.text = "";
+            RB = GetComponent<Rigidbody2D>();
+            bean = GetComponent<Bean>();
+
+            offset = Camera.main.transform.position.z;
 
             minX += boxCollider.bounds.size.x / 2f;
             maxX -= boxCollider.bounds.size.x / 2f;
@@ -50,33 +44,17 @@ namespace RyansNamespace {
         // Update is called once per frame
         void Update()
         {
-            if (currentState == State.SCANNING) {
-                if (Input.inputString.Length > 0 && char.IsDigit(Input.inputString[0])) {
-                    char key = Input.inputString[0];
-                    input += key;
+            if (isDragging)
+                mousePos = Input.mousePosition;
+        }
 
-                    if (input.Length == barCode.Length) {
-                        if (input == barCode) {
-                            Debug.Log("you did it!");
-                        } else {
-                            Debug.Log("you're dumb");
-                            input = "";
-                        }
-                    }
-                } else if (Input.GetKeyDown(KeyCode.Backspace) && input.Length >= 1) {
-                    input = input.Remove(input.Length - 1);
-                }
-
-                inputText.text = input;
-            }
-
+        private void FixedUpdate() {
             if (isDragging) {
-                Vector3 mousePos = Input.mousePosition;
-                mousePos.z = -Camera.main.transform.position.z;
+                mousePos.z = -offset;
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
                 Vector3 clampedPos = new Vector3(Mathf.Clamp(worldPos.x, minX, maxX), Mathf.Clamp(worldPos.y, minY, maxY), worldPos.z);
 
-                transform.position = clampedPos;
+                RB.MovePosition(clampedPos);
             } else {
                 velocity += gravity * Time.deltaTime;
                 velocity = Mathf.Clamp(velocity, terminalVelocity, float.MaxValue);
@@ -85,37 +63,20 @@ namespace RyansNamespace {
                 Mathf.Clamp(transform.position.y + velocity * Time.deltaTime, minY, maxY),
                 transform.position.z);
 
-                transform.position = clampedPos;
+                RB.MovePosition(clampedPos);
             }
         }
 
         private void OnMouseDown() {
-            if (currentState == State.SCANNING) {
-                if (!isBarCodeShown) {
-                    ShowBarCode();
-                    isBarCodeShown = true;
-                } else {
-                    HideBarCode();
-                    isBarCodeShown = false;
-                }
-            } else if (currentState == State.DRAGGING) {
+            if (bean.currentState == Bean.State.DRAG) {
                 isDragging = true;
                 velocity = 0f;
             }
         }
 
         private void OnMouseUp() {
-            if (currentState == State.DRAGGING) {
+            if (bean.currentState == Bean.State.DRAG)
                 isDragging = false;
-            }
-        }
-
-        private void ShowBarCode() {
-            AN.Play("ShowBarCode");
-        }
-
-        private void HideBarCode() {
-            AN.Play("HideBarCode");
         }
 
         private void OnDrawGizmos() {
