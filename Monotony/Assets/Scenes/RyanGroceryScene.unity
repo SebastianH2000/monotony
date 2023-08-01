@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 7838356}
   - component: {fileID: 7838355}
   m_Layer: 0
-  m_Name: bean-code
+  m_Name: Barcode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: -1630527127
   m_SortingLayer: 5
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1056027517, guid: 80bf55eb915ee4110a21be6111a2434a, type: 3}
+  m_Sprite: {fileID: 64776361, guid: 80bf55eb915ee4110a21be6111a2434a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 301685462}
   - component: {fileID: 301685464}
   m_Layer: 0
-  m_Name: grocery-counter
+  m_Name: Checkout Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -266,7 +266,7 @@ SpriteRenderer:
   m_SortingLayerID: -483329359
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1161031111, guid: 4058268afa59e4f0aa5884a1d56cd61e, type: 3}
+  m_Sprite: {fileID: 1596940089, guid: 4058268afa59e4f0aa5884a1d56cd61e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 340534950}
   - component: {fileID: 340534948}
   m_Layer: 0
-  m_Name: beans
+  m_Name: Beans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -368,7 +368,7 @@ SpriteRenderer:
   m_SortingLayerID: -1630527127
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1395253985, guid: 369d9347a555048769f44a5e1a2f2384, type: 3}
+  m_Sprite: {fileID: -1840826815, guid: 369d9347a555048769f44a5e1a2f2384, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 550676927}
   - component: {fileID: 550676926}
   m_Layer: 0
-  m_Name: Input Text
+  m_Name: Display Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 761591522}
   - component: {fileID: 761591523}
   m_Layer: 0
-  m_Name: bag-prompt
+  m_Name: Bag Prompt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -777,7 +777,7 @@ SpriteRenderer:
   m_SortingLayerID: -389202237
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 61969256, guid: b4939a89083ee4648bd1252c8bb29ecf, type: 3}
+  m_Sprite: {fileID: -246981241, guid: b4939a89083ee4648bd1252c8bb29ecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -850,6 +850,107 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5173079100126334736, guid: 58517f146494240b9a3b57d617ec57cc, type: 3}
   m_PrefabInstance: {fileID: 869693328}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1141163833
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 906505408045126442, guid: d49ab89f5bc82d94293fa0ac91bc9ff8, type: 3}
+      propertyPath: m_Name
+      value: Tobii Initializer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d49ab89f5bc82d94293fa0ac91bc9ff8, type: 3}
+--- !u!1 &1511690016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1511690017}
+  - component: {fileID: 1511690018}
+  m_Layer: 0
+  m_Name: Eye Tracking Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1511690017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511690016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1511690018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511690016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b9c0b8eba574f8783da041ab19ade4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1652005288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -924,7 +1025,7 @@ GameObject:
   - component: {fileID: 1655659783}
   - component: {fileID: 1655659785}
   m_Layer: 0
-  m_Name: character-no-eyes
+  m_Name: Customer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -971,7 +1072,7 @@ SpriteRenderer:
   m_SortingLayerID: -516968273
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1372153718, guid: 2990bc94fe7bb4440932996d7b15a90b, type: 3}
+  m_Sprite: {fileID: 1043554962, guid: 2990bc94fe7bb4440932996d7b15a90b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1029,7 +1130,7 @@ GameObject:
   - component: {fileID: 1685515963}
   - component: {fileID: 1685515964}
   m_Layer: 0
-  m_Name: counter-piece
+  m_Name: Scanner
   m_TagString: Scanner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1091,7 +1192,7 @@ SpriteRenderer:
   m_SortingLayerID: -483329359
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 10845807, guid: 0de42681f5c3440cb9034e5379d7ad89, type: 3}
+  m_Sprite: {fileID: -2027911000, guid: 0de42681f5c3440cb9034e5379d7ad89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

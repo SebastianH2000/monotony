@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4058268afa59e4f0aa5884a1d56cd61e
+guid: 2990bc94fe7bb4440932996d7b15a90b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grocery-counter_0
+      name: Customer_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1752
-        height: 847
+        x: 28
+        y: 35
+        width: 828
+        height: 910
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 358cd2e61871a49408f25d5ef176e6ca
-      internalID: -1161031111
+      spriteID: c6d0a6ee971444226b18443e91b30c65
+      internalID: 1043554962
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      grocery-counter_0: -1161031111
+      Customer_0: 1043554962
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

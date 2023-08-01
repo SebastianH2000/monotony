@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: beans_0
+      name: Beans_0
       rect:
         serializedVersion: 2
         x: 762
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 925f408f5914b4b3c97699623fe91c08
-      internalID: -1395253985
+      spriteID: 102dc345757914d9cac5fa607e676589
+      internalID: -1840826815
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      beans_0: -1395253985
+      Beans_0: -1840826815
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

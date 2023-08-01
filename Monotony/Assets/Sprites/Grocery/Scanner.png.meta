@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: counter-piece_0
+      name: Scanner_0
       rect:
         serializedVersion: 2
         x: 1211
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f9a5b2dd4aa44d0797ab5eb16bb85c9
-      internalID: 10845807
+      spriteID: a08e190eedeb2440aafa18de6edecc76
+      internalID: -2027911000
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      counter-piece_0: 10845807
+      Scanner_0: -2027911000
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

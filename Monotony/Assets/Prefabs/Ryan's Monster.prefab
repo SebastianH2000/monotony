@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7173283408133908711}
   - component: {fileID: 7173283408133908708}
+  - component: {fileID: -7339509927541952688}
   m_Layer: 0
   m_Name: Ryan's Monster
   m_TagString: Untagged
@@ -93,6 +94,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7339509927541952688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7173283408133908709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d87d489c55fc504987b709bbe1e4ec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7173283408406016895
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +261,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -389202237
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 61969256, guid: b4939a89083ee4648bd1252c8bb29ecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

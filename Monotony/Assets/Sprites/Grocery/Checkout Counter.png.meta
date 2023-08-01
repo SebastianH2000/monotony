@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2990bc94fe7bb4440932996d7b15a90b
+guid: 4058268afa59e4f0aa5884a1d56cd61e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character-no-eyes_0
+      name: Checkout Counter_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 35
-        width: 828
-        height: 910
+        x: 0
+        y: 0
+        width: 1752
+        height: 847
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05699a540b4c3430484dbfb322789231
-      internalID: 1372153718
+      spriteID: c7d0a69e10bd549e19446c391aedc164
+      internalID: 1596940089
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      character-no-eyes_0: 1372153718
+      Checkout Counter_0: 1596940089
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
