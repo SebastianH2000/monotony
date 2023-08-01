@@ -317,12 +317,9 @@ GameObject:
   - component: {fileID: 340534944}
   - component: {fileID: 340534943}
   - component: {fileID: 340534947}
-  - component: {fileID: 340534945}
-  - component: {fileID: 340534949}
-  - component: {fileID: 340534948}
-  - component: {fileID: 340534950}
   - component: {fileID: 340534951}
-  - component: {fileID: 340534952}
+  - component: {fileID: 340534950}
+  - component: {fileID: 340534948}
   m_Layer: 0
   m_Name: beans
   m_TagString: Untagged
@@ -398,24 +395,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &340534945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340534941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b63d0a0ad1d7449baf5eddfc2af5501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minX: -10
-  maxX: 10
-  minY: -3
-  maxY: 5
-  gravity: -9.81
-  terminalVelocity: -10
 --- !u!61 &340534947
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -463,21 +442,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &340534949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340534941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77e797e6f793b48ee81691e5782bc540, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  computer: {fileID: 301685464}
-  barcode: 8162
-  defaultInputText: TYPE BARCODE
 --- !u!114 &340534950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,6 +454,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76542ae0becd04207b73fd58d0dfc829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minX: -7.5
+  maxX: 7.5
+  minY: -3
+  maxY: 5
+  simulateGravity: 1
+  gravity: -9.81
+  terminalVelocity: -10
+  computer: {fileID: 301685464}
+  barcode: 8162
+  inputPrompt: TYPE BARCODE
 --- !u!50 &340534951
 Rigidbody2D:
   serializedVersion: 4
@@ -511,19 +485,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &340534952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340534941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79f115fffdab046b897447bdf6b97a61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  computer: {fileID: 301685464}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
