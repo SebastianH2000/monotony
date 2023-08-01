@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,14 +11,28 @@ namespace RyansNamespace {
         [SerializeField] private float timeBetweenPotentialSwitches;
         private float timer;
         private GameObject spawnedMonster = null;
-        private SpriteRenderer SR;
+        private List<SpriteRenderer> spriteRenderers = new List<SpriteRenderer>();
         private bool isMonster = false;
 
+        private void Awake() {
+            GetAllSpriteRenderersInChildren(transform);
+        }
+
         // Start is called before the first frame update
-        void Start()
-        {
+        void Start() {
             timer = timeBetweenPotentialSwitches;
-            SR = GetComponent<SpriteRenderer>();
+        }
+
+        private void GetAllSpriteRenderersInChildren(Transform parent) {
+            SpriteRenderer SR = parent.GetComponent<SpriteRenderer>();
+
+            if (SR != null) {
+                spriteRenderers.Add(SR);
+            }
+
+            foreach (Transform child in parent) {
+                GetAllSpriteRenderersInChildren(child);
+            }
         }
 
         // Update is called once per frame
@@ -34,14 +47,18 @@ namespace RyansNamespace {
                     if (Random.Range(0f, 1f) < chanceToTurnIntoMonster) {
                         int randomMonster = Random.Range(0, monsters.Length);
                         spawnedMonster = (GameObject)Instantiate(monsters[randomMonster], transform.position, Quaternion.identity);
-                        SR.enabled = false;
+                        foreach (SpriteRenderer SR in spriteRenderers) {
+                            SR.enabled = false;
+                        }
 
                         isMonster = true;
                     }
                 } else {
                     if (Random.Range(0f, 1f) < chanceToTurnBack) {
                         Destroy(spawnedMonster);
-                        SR.enabled = true;
+                        foreach (SpriteRenderer SR in spriteRenderers) {
+                            SR.enabled = true;
+                        }
 
                         isMonster = false;
                     }

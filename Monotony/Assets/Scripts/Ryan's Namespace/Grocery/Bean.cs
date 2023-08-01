@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 namespace RyansNamespace
 {
@@ -7,7 +8,7 @@ namespace RyansNamespace
     public class Bean : Drag
     {
         [Header("References")]
-        [SerializeField] private Computer computer;
+        [SerializeField] private TextMeshProUGUI displayText;
 
         [Header("Barcode")]
         [SerializeField] private string barcode;
@@ -29,13 +30,16 @@ namespace RyansNamespace
 
         #region Default
 
+        public override void Awake() {
+            base.Awake();
+            AN = GetComponent<Animator>();
+        }
+
         // Start is called before the first frame update
         public override void Start()
         {
             base.Start();
-
-            AN = GetComponent<Animator>();
-            computer.UpdateDisplayText(inputPrompt);
+            displayText.text = inputPrompt;
         }
 
         // Update is called once per frame
@@ -44,9 +48,7 @@ namespace RyansNamespace
             base.Update();
 
             if (currentState == State.BARCODE)
-            {
                 GetAndDisplayInput();
-            }
         }
 
         #endregion
@@ -86,35 +88,33 @@ namespace RyansNamespace
 
                 // display input
 
-                string displayText = "";
+                displayText.text = "";
 
                 for (int i = 0; i < input.Length; i++)
                 {
                     if (i < input.Length - 1)
-                        displayText += input[i] + " ";
+                        displayText.text += input[i] + " ";
                     else
-                        displayText += input[i];
+                        displayText.text += input[i];
                 }
-
-                computer.UpdateDisplayText(displayText);
             }
         }
 
         private IEnumerator RetrySequence()
         {
             yield return new WaitForSeconds(0.5f);
-            yield return StartCoroutine(computer.FlashingText("INCORRECT!", 3, 0.5f));
-            yield return StartCoroutine(computer.FlashingText("TRY AGAIN!", 3, 0.5f));
+            yield return StartCoroutine(FlashingText("INCORRECT!", 3, 0.5f));
+            yield return StartCoroutine(FlashingText("TRY AGAIN!", 3, 0.5f));
 
             input = "";
-            computer.UpdateDisplayText(inputPrompt);
+            displayText.text = inputPrompt;
             ignoreInput = false;
         }
 
         private IEnumerator SuccessSequence()
         {
             yield return new WaitForSeconds(0.5f);
-            yield return StartCoroutine(computer.FlashingText("CORRECT!", 3, 0.5f));
+            yield return StartCoroutine(FlashingText("CORRECT!", 3, 0.5f));
 
             if (isBarcodeShown)
             {
@@ -122,7 +122,7 @@ namespace RyansNamespace
                 isBarcodeShown = false;
             }
 
-            computer.UpdateDisplayText("DRAG ACROSS");
+            displayText.text = "DRAG ACROSS";
             currentState = State.DRAG;
         }
 
@@ -156,6 +156,15 @@ namespace RyansNamespace
                 base.OnMouseUp();
         }
 
+        private IEnumerator FlashingText(string text, int times, float delay) {
+            for (int i = 0; i < times; i++) {
+                displayText.text = text;
+                yield return new WaitForSeconds(delay);
+                displayText.text = "";
+                yield return new WaitForSeconds(delay);
+            }
+        }
+
         #region Scanner
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -180,9 +189,9 @@ namespace RyansNamespace
                     float relativeYPos = transform.position.y - boxCollider.bounds.size.y / 2f;
 
                     if (Mathf.Abs(otherRelativeYPos - relativeYPos) < 0.1f && transform.position.x < other.transform.position.x)
-                        StartCoroutine(computer.FlashingText("SCANNED!", 3, 0.5f));
+                        StartCoroutine(FlashingText("SCANNED!", 3, 0.5f));
                     else
-                        StartCoroutine(computer.FlashingText("SCAN FAILED", 3, 0.5f));
+                        StartCoroutine(FlashingText("SCAN FAILED", 3, 0.5f));
 
                     isScanning = false;
                 }

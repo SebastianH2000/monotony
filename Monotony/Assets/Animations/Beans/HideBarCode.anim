@@ -39,7 +39,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: bean-code
+    path: Barcode
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
@@ -65,7 +65,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: bean-code
+    path: Barcode
   m_FloatCurves:
   - curve:
       serializedVersion: 2
@@ -101,7 +101,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: bean-code
+    path: Barcode
     classID: 212
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -113,21 +113,21 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2091400729
+      path: 1477655546
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2091400729
+      path: 1477655546
       attribute: 3
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2091400729
+      path: 1477655546
       attribute: 304273561
       script: {fileID: 0}
       typeID: 212
@@ -180,7 +180,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: bean-code
+    path: Barcode
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -208,7 +208,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: bean-code
+    path: Barcode
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -236,7 +236,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: bean-code
+    path: Barcode
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -264,7 +264,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.x
-    path: bean-code
+    path: Barcode
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -292,7 +292,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.y
-    path: bean-code
+    path: Barcode
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -320,7 +320,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.z
-    path: bean-code
+    path: Barcode
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -357,7 +357,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: bean-code
+    path: Barcode
     classID: 212
     script: {fileID: 0}
   m_EulerEditorCurves: []

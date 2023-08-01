@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f69e4c345e3e74a239855e6447224170
+guid: 9917e4d1166e843be9fdd388d0a5ea89
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: check-mark_0
+      name: Monster Frame_0
       rect:
         serializedVersion: 2
-        x: 448
-        y: 146
-        width: 637
-        height: 749
+        x: 12
+        y: 0
+        width: 1136
+        height: 986
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e20b7746d45e54d46bb4afc03f0ae8a7
-      internalID: 2127755814
+      spriteID: fc2ed78e180e54dd8ad560d6a4c724f9
+      internalID: 1639613120
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      check-mark_0: 2127755814
+      Monster Frame_0: 1639613120
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

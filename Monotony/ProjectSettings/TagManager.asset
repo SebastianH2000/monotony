@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Scanner
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -56,4 +57,7 @@ TagManager:
     locked: 0
   - name: Interactables
     uniqueID: 2664440169
+    locked: 0
+  - name: Player
+    uniqueID: 1177663545
     locked: 0

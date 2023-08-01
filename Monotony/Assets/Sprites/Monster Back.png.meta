@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: monster-back_0
+      name: Monster Back_0
       rect:
         serializedVersion: 2
         x: 90
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02ac9199ccb034716b91a14c8f9d1ba1
-      internalID: -1039761734
+      spriteID: 4527de5dc42ef4ccc8730cfc4b3c4d67
+      internalID: -2128252640
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      monster-back_0: -1039761734
+      Monster Back_0: -2128252640
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

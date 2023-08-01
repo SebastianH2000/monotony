@@ -24,15 +24,18 @@ namespace RyansNamespace {
 
         private bool isDragging = false;
 
+        public virtual void Awake() {
+            RB = GetComponent<Rigidbody2D>();
+            boxCollider = GetComponent<BoxCollider2D>();
+        }
+
         // Start is called before the first frame update
         public virtual void Start()
         {
-            RB = GetComponent<Rigidbody2D>();
             RB.bodyType = RigidbodyType2D.Kinematic;
 
             offset = Camera.main.transform.position.z;
 
-            boxCollider = GetComponent<BoxCollider2D>();
             minX += boxCollider.bounds.size.x / 2f;
             maxX -= boxCollider.bounds.size.x / 2f;
             minY += boxCollider.bounds.size.y / 2f;
