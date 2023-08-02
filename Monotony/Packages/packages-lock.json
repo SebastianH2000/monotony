@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "com.tobii.gaming.sdk": {
-      "version": "file:/Users/ryancheng/Downloads/TobiiUnitySDK_4.1.0",
+      "version": "file:TobiiUnitySDK_4.1.0",
       "depth": 0,
-      "source": "local",
+      "source": "embedded",
       "dependencies": {}
     },
     "com.unity.2d.animation": {

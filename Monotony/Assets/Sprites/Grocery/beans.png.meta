@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 369d9347a555048769f44a5e1a2f2384
+guid: aabd97f364dc647a587f119cb7060220
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -120,10 +120,10 @@ TextureImporter:
       name: Beans_0
       rect:
         serializedVersion: 2
-        x: 762
-        y: 90
-        width: 403
-        height: 729
+        x: 72
+        y: 0
+        width: 117
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 102dc345757914d9cac5fa607e676589
-      internalID: -1840826815
+      spriteID: 29b81b11125ce4dce87551b87bcaf6c7
+      internalID: -182025478
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Beans_0: -1840826815
+      Beans_0: -182025478
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

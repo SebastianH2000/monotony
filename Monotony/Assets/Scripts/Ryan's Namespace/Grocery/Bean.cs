@@ -9,6 +9,7 @@ namespace RyansNamespace
     {
         [Header("References")]
         [SerializeField] private TextMeshProUGUI displayText;
+        [SerializeField] private Monster monster;
 
         [Header("Barcode")]
         [SerializeField] private string barcode;
@@ -18,6 +19,7 @@ namespace RyansNamespace
         private string input;
 
         private bool isScanning;
+        private bool hasNotifiedMonster = false;
 
         private State currentState = State.BARCODE;
         private Animator AN;
@@ -146,6 +148,12 @@ namespace RyansNamespace
                     break;
                 case State.DRAG:
                     base.OnMouseDown();
+                    if (!hasNotifiedMonster)
+                    {
+                        monster.SetType(Monster.Type.Chaser);
+                        monster.SetTarget(transform.position);
+                        hasNotifiedMonster = true;
+                    }
                     break;
             }
         }
