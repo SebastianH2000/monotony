@@ -20,17 +20,17 @@ public class Send : MonoBehaviour
     void OnMouseEnter()
     {
         if (GameObject.Find("Email").GetComponent<Emails>().canSend) {
-            this.GetComponent<SpriteRenderer>().color = new Color(0.45f,0.45f,0.45f,1);
+            this.GetComponent<SpriteRenderer>().color = new Color(0.65f,0.65f,0.65f,1);
         }
     }
 
     void OnMouseExit() 
     {
         if (GameObject.Find("Email").GetComponent<Emails>().canSend) {
-            this.GetComponent<SpriteRenderer>().color = new Color(0.4f,0.4f,0.4f,1);
+            this.GetComponent<SpriteRenderer>().color = new Color(0.85f,0.85f,0.85f,1);
         }
         else {
-            this.GetComponent<SpriteRenderer>().color = new Color(0.35f,0.35f,0.35f,1);
+            this.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1);
         }
     }
 

@@ -14,14 +14,17 @@ public class Alpha : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
     }
 
     public void setAlpha(float alpha)
     {
         //parent
-        Color parentColor = gameObject.GetComponent<SpriteRenderer>().color;
-        parentColor.a = alpha;
-        gameObject.GetComponent<SpriteRenderer>().color = parentColor;
+        if (gameObject.GetComponent<SpriteRenderer>()) {
+            Color parentColor = gameObject.GetComponent<SpriteRenderer>().color;
+            parentColor.a = alpha;
+            gameObject.GetComponent<SpriteRenderer>().color = parentColor;
+        }
 
         //children
         SpriteRenderer[] children = GetComponentsInChildren<SpriteRenderer>();
@@ -39,6 +42,21 @@ public class Alpha : MonoBehaviour
             newColor = child.color;
             newColor.a = alpha;
             child.color = newColor;
+        }
+
+        if (alpha == 0) {
+            BoxCollider2D[] Boxchildren = GetComponentsInChildren<BoxCollider2D>();
+            foreach (BoxCollider2D child in Boxchildren)
+            {
+                child.GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }
+        else {
+            BoxCollider2D[] Boxchildren = GetComponentsInChildren<BoxCollider2D>();
+            foreach (BoxCollider2D child in Boxchildren)
+            {
+                child.GetComponent<BoxCollider2D>().enabled = true;
+            }
         }
     }
 }

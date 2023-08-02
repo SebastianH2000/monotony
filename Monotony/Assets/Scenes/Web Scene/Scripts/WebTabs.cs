@@ -26,7 +26,7 @@ public class WebTabs : MonoBehaviour
                 offset = selectedObject.transform.position - mousePosition; //set positions
                 if (targetObject.name == gameObject.name) //if the overlap is hitting the object that this script is attached to
                 {
-                    if (gameObject.name == "EmailTab") //if this script is attached to the emailTab
+                    /*if (gameObject.name == "EmailTab") //if this script is attached to the emailTab
                     {
                         GameObject.Find("Email").GetComponent<Alpha>().setAlpha(1f);
                         GameObject.Find("Excitement").GetComponent<Alpha>().setAlpha(0f);
@@ -41,7 +41,7 @@ public class WebTabs : MonoBehaviour
 
                         GameObject.Find("EmailTab").GetComponent<SpriteRenderer>().color = new Color(0.6037736f, 0.6037736f, 0.6037736f, 1);
                         GameObject.Find("ExcitementTab").GetComponent<SpriteRenderer>().color = new Color(0.7529413f, 0.7529413f, 0.7529413f, 1);
-                    }
+                    }*/
                 }
             }
         }
