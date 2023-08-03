@@ -230,7 +230,7 @@ namespace SebastiansNamespace {
                 currentEmail.author = "Junk";
                 currentEmail.emailObject.transform.Find("Canvas").transform.Find("Subject").gameObject.GetComponent<TextMeshProUGUI>().text = junkSubjects[Random.Range(0,(int)(junkSubjects.Count))];
                 currentEmail.subject = junkSubjects[currentEmail.replyIndex];
-                currentEmail.replyString = "Don't reply - just delete it.";
+                currentEmail.replyString = "";
             }
 
             if (currentEmail.isUrgent == false) {
