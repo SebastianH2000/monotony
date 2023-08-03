@@ -16,7 +16,7 @@ public class WebTabs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //mouse position in world space
+        /*mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //mouse position in world space
         if (Input.GetMouseButtonDown(0)) //if left mouse button was clicked
         {
             Collider2D targetObject = Physics2D.OverlapPoint(mousePosition); //get physics overlap
@@ -41,9 +41,9 @@ public class WebTabs : MonoBehaviour
 
                         GameObject.Find("EmailTab").GetComponent<SpriteRenderer>().color = new Color(0.6037736f, 0.6037736f, 0.6037736f, 1);
                         GameObject.Find("ExcitementTab").GetComponent<SpriteRenderer>().color = new Color(0.7529413f, 0.7529413f, 0.7529413f, 1);
-                    }*/
+                    }
                 }
             }
-        }
+        }*/
     }
 }

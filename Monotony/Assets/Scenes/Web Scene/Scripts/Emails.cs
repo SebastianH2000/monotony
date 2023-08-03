@@ -7,6 +7,7 @@ namespace SebastiansNamespace {
     public class Emails : MonoBehaviour
     {
         public GameObject emailPrefab;
+        public GameObject popupPrefab;
 
         public List<Email> emailList = new List<Email>();
 
@@ -23,6 +24,15 @@ namespace SebastiansNamespace {
         public int currentEmailClicked  = -1;
         public bool canSend = false;
         public bool browserOpen = false;
+        private bool mouseHasClicked = false;
+
+        //audio
+        public AudioSource mouseClickAudio;
+        public AudioSource emailRecievedAudio;
+        public AudioSource closePopupAudio;
+        public AudioSource sendEmailAudio;
+
+        public AudioSource[] keyboardHitAudio;
 
         // Start is called before the first frame update
         void Start()
@@ -85,6 +95,17 @@ namespace SebastiansNamespace {
         // Update is called once per frame
         void Update()
         {
+            if (!mouseHasClicked) {
+                if (Input.GetMouseButton(0)) {
+                    mouseHasClicked = true;
+                    mouseClickAudio.Play();
+                }
+            }
+            else {
+                if (!Input.GetMouseButton(0)) {
+                    mouseHasClicked = false;
+                }
+            }
             if (browserOpen) {
                 this.transform.parent.gameObject.GetComponent<Alpha>().setAlpha(1f);
                 float replyFieldAlpha = this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<TextMeshProUGUI>().color.a;
@@ -133,6 +154,7 @@ namespace SebastiansNamespace {
                     else {
                         char key = Input.inputString[0];
                         if (char.ToLower(key) == char.ToLower(targetString[input.Length])) {
+                            keyboardHitAudio[Random.Range(0,(keyboardHitAudio.Length))].Play();
                             input += targetString[input.Length];
                         }
 
@@ -156,9 +178,17 @@ namespace SebastiansNamespace {
                     emailSent();
                 }
 
+                //random emails
                 if (Random.Range(0f,1f) > 0.9996f) 
                 {
+                    emailRecievedAudio.Play();
                     addEmail();
+                }
+
+                //random pop-ups
+                if (Random.Range(0f,1f) > 0.9996f) 
+                {
+                    Instantiate(popupPrefab, this.transform.parent.transform);
                 }
             }
             else {
@@ -193,11 +223,11 @@ namespace SebastiansNamespace {
             if (emailList.Count > 0 && emailList[emailList.Count - 1].isShifting) {
                 currentEmail.isShifting = true;
                 currentEmail.shiftTimer = emailList[emailList.Count - 1].shiftTimer;
-                currentEmail.shiftPos1 = new Vector3(0,(0.33f - (0.09f * (emailList.Count + 1))),0);
-                currentEmail.shiftPos2 = new Vector3(0,(0.33f - (0.09f * emailList.Count)),0);
+                currentEmail.shiftPos1 = new Vector3(0,(0.33f - (0.09f * (emailList.Count + 1))),-0.1f);
+                currentEmail.shiftPos2 = new Vector3(0,(0.33f - (0.09f * emailList.Count)),-0.1f);
             }
             else {
-                currentEmail.emailObject.transform.localPosition = new Vector3(0,(0.33f - (0.09f * emailList.Count)),0);
+                currentEmail.emailObject.transform.localPosition = new Vector3(0,(0.33f - (0.09f * emailList.Count)),-0.1f);
             }
             //currentEmail.emailObject.transform.Find("Canvas").transform.Find("Subject").gameObject.GetComponent<TextMeshProUGUI>().text = emailList.Count.ToString();
             if (Random.Range(0f,1f) > 0.66f) {
@@ -259,8 +289,9 @@ namespace SebastiansNamespace {
                 emailList[i].isShifting = true;
                 emailList[i].shiftTimer = 0;
                 emailList[i].shiftPos1 = emailList[i].emailObject.transform.localPosition;
-                emailList[i].shiftPos2 = new Vector3(0,(0.33f - (0.09f * i)),0);
+                emailList[i].shiftPos2 = new Vector3(0,(0.33f - (0.09f * i)),-0.1f);
             }
+            sendEmailAudio.Play();
         }
 
         public void emailClicked(int emailID) {

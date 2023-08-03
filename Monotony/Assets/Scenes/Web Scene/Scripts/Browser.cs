@@ -24,8 +24,17 @@ public class Browser : MonoBehaviour
         else if (this.name == "Exit Button") {
             GameObject.Find("Email").GetComponent<Emails>().browserOpen = false;
         }
-        else {
-            Debug.Log(this.name);
+        else if (this.name == "Pop-up Exit Button") {
+            GameObject.Find("Email").GetComponent<Emails>().closePopupAudio.Play();
+            Destroy(this.transform.parent.gameObject);
         }
+    }
+
+    void OnMouseEnter() {
+        this.GetComponent<SpriteRenderer>().color = new Color(0.8f,0.8f,0.8f,1);
+    }
+
+    void OnMouseExit() {
+        this.GetComponent<SpriteRenderer>().color = new Color (1,1,1,1);
     }
 }
