@@ -22,6 +22,7 @@ namespace SebastiansNamespace {
         private string input = "";
         public int currentEmailClicked  = -1;
         public bool canSend = false;
+        public bool browserOpen = false;
 
         // Start is called before the first frame update
         void Start()
@@ -84,70 +85,87 @@ namespace SebastiansNamespace {
         // Update is called once per frame
         void Update()
         {
-            if (currentEmailClicked >= 0 && emailList[currentEmailClicked].author != "Junk") {
-                textPromptTimer += Time.deltaTime;
-                float lightness = (Mathf.Sin(textPromptTimer*8)+2)/3;
-                this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<TextMeshProUGUI>().color = Color.HSVToRGB(1, 0, lightness);
-            }
-            else if (currentEmailClicked >= 0) {
-                this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<TextMeshProUGUI>().color = new Color(0.6f,0,0,1);
-            }
-            else if (currentEmailClicked < 0) {
-                textPromptTimer += Time.deltaTime;
-                float lightness = (Mathf.Sin(textPromptTimer*8)+2)/3;
-                this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<TextMeshProUGUI>().color = Color.HSVToRGB(1, 0, lightness);
-            }
+            if (browserOpen) {
+                this.transform.parent.gameObject.GetComponent<Alpha>().setAlpha(1f);
+                float replyFieldAlpha = this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<TextMeshProUGUI>().color.a;
+                    
+                if (currentEmailClicked >= 0 && emailList[currentEmailClicked].author != "Junk" && input.Length == 0) {
+                    textPromptTimer += Time.deltaTime;
+                    float lightness = (Mathf.Sin(textPromptTimer*8)+2)/3;
+                    this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<TextMeshProUGUI>().color = Color.HSVToRGB(1, 0, lightness);
+                    this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<Alpha>().setAlpha(replyFieldAlpha);
+                }
+                else if (currentEmailClicked >= 0 && input.Length > 0) {
+                    textPromptTimer += Time.deltaTime;
+                    this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<TextMeshProUGUI>().color = new Color(1,1,1,1);
+                    this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<Alpha>().setAlpha(replyFieldAlpha);
+                }
+                else if (currentEmailClicked >= 0) {
+                    this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<TextMeshProUGUI>().color = new Color(0.6f,0,0,1);
+                }
+                else if (currentEmailClicked < 0) {
+                    textPromptTimer += Time.deltaTime;
+                    float lightness = (Mathf.Sin(textPromptTimer*8)+2)/3;
+                    this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<TextMeshProUGUI>().color = Color.HSVToRGB(1, 0, lightness);
+                    this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<Alpha>().setAlpha(replyFieldAlpha);
+                }
 
-            for (int i = 0; i < emailList.Count; i++) {
-                if (emailList[i].isShifting) {
-                    if (emailList[i].shiftTimer >= 1) {
-                        emailList[i].isShifting = false;
-                        emailList[i].emailObject.transform.localPosition = emailList[i].shiftPos2;
-                    }
-                    else {
-                        emailList[i].shiftTimer += Time.deltaTime;
-                        emailList[i].emailObject.transform.localPosition = Vector3.Lerp(emailList[i].shiftPos1,emailList[i].shiftPos2,emailList[i].shiftTimer);
+                for (int i = 0; i < emailList.Count; i++) {
+                    if (emailList[i].isShifting) {
+                        if (emailList[i].shiftTimer >= 1) {
+                            emailList[i].isShifting = false;
+                            emailList[i].emailObject.transform.localPosition = emailList[i].shiftPos2;
+                        }
+                        else {
+                            emailList[i].shiftTimer += Time.deltaTime;
+                            emailList[i].emailObject.transform.localPosition = Vector3.Lerp(emailList[i].shiftPos1,emailList[i].shiftPos2,emailList[i].shiftTimer);
+                        }
                     }
                 }
-            }
 
-            string targetString = this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<TextMeshProUGUI>().text;
-            if (Input.inputString.Length > 0 && !ignoreInput)
-            {
+                string targetString = this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<TextMeshProUGUI>().text;
+                if (Input.inputString.Length > 0 && !ignoreInput && currentEmailClicked > -1)
+                {
+                    if (Input.GetKeyDown(KeyCode.Return) && canSend) 
+                    {
+                        emailSent();
+                    }
+                    else {
+                        char key = Input.inputString[0];
+                        if (char.ToLower(key) == char.ToLower(targetString[input.Length])) {
+                            input += targetString[input.Length];
+                        }
+
+                        if (input == targetString && canSend == false)
+                        {
+                            GameObject.Find("Send Bubble").GetComponent<SpriteRenderer>().color = new Color(0.85f,0.85f,0.85f,1);
+                            canSend = true;
+                        }
+                        else if (input != targetString) {
+                            canSend = false;
+                        }
+
+                        //display input
+                        //computer.UpdateDisplayText(displayText);
+                        this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Input").gameObject.GetComponent<TextMeshProUGUI>().text = input;
+                    }
+                }
+
                 if (Input.GetKeyDown(KeyCode.Return) && canSend) 
                 {
                     emailSent();
                 }
-                else {
-                    char key = Input.inputString[0];
-                    if (char.ToLower(key) == char.ToLower(targetString[input.Length])) {
-                        input += targetString[input.Length];
-                    }
 
-                    if (input == targetString && canSend == false)
-                    {
-                        GameObject.Find("Send Bubble").GetComponent<SpriteRenderer>().color = new Color(0.4f,0.4f,0.4f,1);
-                        canSend = true;
-                    }
-                    else if (input != targetString) {
-                        canSend = false;
-                    }
-
-                    //display input
-                    //computer.UpdateDisplayText(displayText);
-                    this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Input").gameObject.GetComponent<TextMeshProUGUI>().text = input;
+                if (Random.Range(0f,1f) > 0.9996f) 
+                {
+                    addEmail();
                 }
             }
-
-            if (Input.GetKeyDown(KeyCode.Return) && canSend) 
-            {
-                emailSent();
+            else {
+                this.transform.parent.gameObject.GetComponent<Alpha>().setAlpha(0f);
             }
 
-            if (Random.Range(0f,1f) > 0.9997f) 
-            {
-                addEmail();
-            }
+            GameObject.Find("Email Count Display").GetComponent<TextMeshProUGUI>().text = emailList.Count.ToString();
         }
 
         void StartEmails() {
@@ -172,7 +190,15 @@ namespace SebastiansNamespace {
             currentEmail.emailObject = Instantiate(emailPrefab, this.transform);
             currentEmail.emailObject.name = emailList.Count.ToString();
 
-            currentEmail.emailObject.transform.localPosition = new Vector3(0,(0.33f - (0.09f * emailList.Count)),0);
+            if (emailList.Count > 0 && emailList[emailList.Count - 1].isShifting) {
+                currentEmail.isShifting = true;
+                currentEmail.shiftTimer = emailList[emailList.Count - 1].shiftTimer;
+                currentEmail.shiftPos1 = new Vector3(0,(0.33f - (0.09f * (emailList.Count + 1))),0);
+                currentEmail.shiftPos2 = new Vector3(0,(0.33f - (0.09f * emailList.Count)),0);
+            }
+            else {
+                currentEmail.emailObject.transform.localPosition = new Vector3(0,(0.33f - (0.09f * emailList.Count)),0);
+            }
             //currentEmail.emailObject.transform.Find("Canvas").transform.Find("Subject").gameObject.GetComponent<TextMeshProUGUI>().text = emailList.Count.ToString();
             if (Random.Range(0f,1f) > 0.66f) {
                 //work
@@ -204,7 +230,7 @@ namespace SebastiansNamespace {
                 currentEmail.author = "Junk";
                 currentEmail.emailObject.transform.Find("Canvas").transform.Find("Subject").gameObject.GetComponent<TextMeshProUGUI>().text = junkSubjects[Random.Range(0,(int)(junkSubjects.Count))];
                 currentEmail.subject = junkSubjects[currentEmail.replyIndex];
-                currentEmail.replyString = "Don't give them what they want - just delete it.";
+                currentEmail.replyString = "";
             }
 
             if (currentEmail.isUrgent == false) {
@@ -214,6 +240,11 @@ namespace SebastiansNamespace {
             currentEmail.emailObject.transform.Find("Canvas").transform.Find("Time").gameObject.GetComponent<TextMeshProUGUI>().text = emailTimes[Random.Range(0,(int)(emailTimes.Count))];
             currentEmail.ID = emailList.Count;
             currentEmail.emailObject.transform.Find("Sprites").transform.Find("Background").gameObject.tag = "EmailBackground";
+
+            if (GameObject.Find("EmailTab").GetComponent<SpriteRenderer>().color.r < 0.7 || !browserOpen) {
+                currentEmail.emailObject.GetComponent<Alpha>().setAlpha(0f);
+            }
+
             emailList.Add(currentEmail);
         }
 
@@ -242,13 +273,13 @@ namespace SebastiansNamespace {
                 currentEmailClicked = emailID;
                 if (emailList[emailID].author == "Junk") {
                     GameObject.Find("Send Text").GetComponent<TextMeshProUGUI>().text = "Delete";
-                    GameObject.Find("Send Bubble").GetComponent<SpriteRenderer>().color = new Color(0.6f,0,0,1);
+                    GameObject.Find("Send Bubble").GetComponent<SpriteRenderer>().color = new Color(0.85f,0.85f,0.85f,1);
                     canSend = true;
                     ignoreInput = true;
                 }
                 else {
                     GameObject.Find("Send Text").GetComponent<TextMeshProUGUI>().text = "Send";
-                    GameObject.Find("Send Bubble").GetComponent<SpriteRenderer>().color = new Color(0.35f,0.35f,0.35f,1);
+                    GameObject.Find("Send Bubble").GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1);
                     canSend = false;
                     ignoreInput = false;
                 }
@@ -261,7 +292,7 @@ namespace SebastiansNamespace {
                 this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Input").gameObject.GetComponent<TextMeshProUGUI>().text = "";
                 this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Subject").gameObject.GetComponent<TextMeshProUGUI>().text = "Re:";
                 this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Recipient").gameObject.GetComponent<TextMeshProUGUI>().text = "To:";
-                GameObject.Find("Send Bubble").GetComponent<SpriteRenderer>().color = new Color(0.35f,0.35f,0.35f,1);
+                GameObject.Find("Send Bubble").GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1);
                 input = "";
                 removeEmail(currentEmailClicked);
             }

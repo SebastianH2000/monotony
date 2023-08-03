@@ -19,20 +19,23 @@ public class EmailScript : MonoBehaviour
 
     void OnMouseEnter()
     {
-        this.transform.Find("Sprites").transform.Find("Background").gameObject.GetComponent<SpriteRenderer>().color = new Color(0.5f,0.5f,0.5f,1);
+        float currentA  = this.transform.Find("Sprites").transform.Find("Background").gameObject.GetComponent<SpriteRenderer>().color.a;
+        this.transform.Find("Sprites").transform.Find("Background").gameObject.GetComponent<SpriteRenderer>().color = new Color(0.7f,0.7f,0.7f,currentA);
     }
 
     void OnMouseExit() 
     {
         if (GameObject.Find("Email").GetComponent<Emails>().currentEmailClicked != int.Parse(this.name)) {
-            this.transform.Find("Sprites").transform.Find("Background").gameObject.GetComponent<SpriteRenderer>().color = new Color(0.71f,0.71f,0.71f,1);
+            float currentA  = this.transform.Find("Sprites").transform.Find("Background").gameObject.GetComponent<SpriteRenderer>().color.a;
+            this.transform.Find("Sprites").transform.Find("Background").gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,currentA);
         }
     }
 
     void OnMouseDown() 
     {
         SpriteRenderer[] children = this.transform.parent.gameObject.GetComponentsInChildren<SpriteRenderer>();
-        Color newColor = new Color(0.71f,0.71f,0.71f,1);
+        float currentA  = this.transform.Find("Sprites").transform.Find("Background").gameObject.GetComponent<SpriteRenderer>().color.a;
+        Color newColor = new Color(1f,1f,1f,currentA);
         foreach (SpriteRenderer child in children)
         {
             if (child.gameObject.transform.tag == "EmailBackground") {
@@ -40,7 +43,7 @@ public class EmailScript : MonoBehaviour
             }
         }
         //this.transform.parent.transform.Find("Sprites").transform.Find("Background")
-        this.transform.Find("Sprites").transform.Find("Background").gameObject.GetComponent<SpriteRenderer>().color = new Color(0.5f,0.5f,0.5f,1);
+        this.transform.Find("Sprites").transform.Find("Background").gameObject.GetComponent<SpriteRenderer>().color = new Color(0.7f,0.7f,0.7f,currentA);
         //Debug.Log(this.name);
         GameObject.Find("Email").GetComponent<Emails>().emailClicked(int.Parse(this.name));
     }
