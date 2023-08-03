@@ -5,6 +5,7 @@ namespace RyansNamespace {
     {
         [SerializeField] private HealthBar healthBar;
         [SerializeField] private float maxHealth;
+        [SerializeField] private float damagePerSecond;
         private float currentHealth;
 
         // Start is called before the first frame update
@@ -14,8 +15,8 @@ namespace RyansNamespace {
             healthBar.SetMaxHealth(currentHealth);
         }
 
-        public void TakeDamage(float damage) {
-            currentHealth = Mathf.Clamp(currentHealth - damage, 0f, maxHealth);
+        public void TakeDamage() {
+            currentHealth = Mathf.Clamp(currentHealth - damagePerSecond * Time.deltaTime, 0f, maxHealth);
             healthBar.SetHealth(currentHealth);
         }
     }

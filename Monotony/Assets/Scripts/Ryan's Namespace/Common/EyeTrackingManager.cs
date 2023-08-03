@@ -5,7 +5,6 @@ namespace RyansNamespace {
     public class EyeTrackingManager : MonoBehaviour
     {
         [SerializeField] private Player player;
-        [SerializeField] private float damage = 10f;
 
         private float offset;
         private bool isConnected = false;
@@ -39,7 +38,7 @@ namespace RyansNamespace {
 
                 if (collider != null) {
                     if (collider.CompareTag("Monster"))
-                        player.TakeDamage(damage * Time.deltaTime);
+                        player.TakeDamage();
                 }
             }
         }

@@ -5,12 +5,6 @@ namespace RyansNamespace {
     [RequireComponent(typeof(Rigidbody2D))]
     public class Drag : MonoBehaviour
     {
-        [Header("Boundaries")]
-        [SerializeField] private float minX;
-        [SerializeField] private float maxX;
-        [SerializeField] private float minY;
-        [SerializeField] private float maxY;
-
         [Header("Gravity")]
         [SerializeField] private bool simulateGravity = false;
         [SerializeField] private float gravity;
@@ -24,6 +18,11 @@ namespace RyansNamespace {
 
         private bool isDragging = false;
 
+        private float xMin;
+        private float xMax;
+        private float yMin;
+        private float yMax;
+
         public virtual void Awake() {
             RB = GetComponent<Rigidbody2D>();
             boxCollider = GetComponent<BoxCollider2D>();
@@ -36,10 +35,15 @@ namespace RyansNamespace {
 
             offset = Camera.main.transform.position.z;
 
-            minX += boxCollider.bounds.size.x / 2f;
-            maxX -= boxCollider.bounds.size.x / 2f;
-            minY += boxCollider.bounds.size.y / 2f;
-            maxY -= boxCollider.bounds.size.y / 2f;
+            xMin = Boundaries.instance.GetXMin();
+            xMax = Boundaries.instance.GetXMax();
+            yMin = Boundaries.instance.GetYMin();
+            yMax = Boundaries.instance.GetYMax();
+
+            xMin += boxCollider.bounds.size.x / 2f;
+            xMax -= boxCollider.bounds.size.x / 2f;
+            yMin += boxCollider.bounds.size.y / 2f;
+            yMax -= boxCollider.bounds.size.y / 2f;
         }
 
         // Update is called once per frame
@@ -53,14 +57,14 @@ namespace RyansNamespace {
             if (isDragging) {
                 mousePos.z = -offset;
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-                Vector3 clampedPos = new Vector3(Mathf.Clamp(worldPos.x, minX, maxX), Mathf.Clamp(worldPos.y, minY, maxY), worldPos.z);
+                Vector3 clampedPos = new Vector3(Mathf.Clamp(worldPos.x, xMin, xMax), Mathf.Clamp(worldPos.y, yMin, yMax), worldPos.z);
                 RB.MovePosition(clampedPos);
             } else if (simulateGravity) {
                 velocity += gravity * Time.fixedDeltaTime;
                 velocity = Mathf.Clamp(velocity, terminalVelocity, float.MaxValue);
 
-                Vector2 clampedPos = new Vector3(Mathf.Clamp(RB.position.x, minX, maxX),
-                Mathf.Clamp(RB.position.y + velocity * Time.fixedDeltaTime, minY, maxY));
+                Vector2 clampedPos = new Vector3(Mathf.Clamp(RB.position.x, xMin, xMax),
+                Mathf.Clamp(RB.position.y + velocity * Time.fixedDeltaTime, yMin, yMax));
 
                 RB.MovePosition(clampedPos);
             }
@@ -78,7 +82,7 @@ namespace RyansNamespace {
 
         public virtual void OnDrawGizmos() {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(new Vector3((minX + maxX) / 2f, (minY + maxY) / 2f, 0f), new Vector3(maxX - minX, maxY - minY, 0f));
+            Gizmos.DrawWireCube(new Vector3((xMin + xMax) / 2f, (yMin + yMax) / 2f, 0f), new Vector3(xMax - xMin, yMax - yMin, 0f));
         }
     }
 }

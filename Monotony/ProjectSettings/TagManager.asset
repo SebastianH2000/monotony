@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Scanner
   - Monster
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -46,11 +46,11 @@ TagManager:
   - name: Environment
     uniqueID: 3811637937
     locked: 0
-  - name: Characters
-    uniqueID: 3777999023
-    locked: 0
   - name: UI
     uniqueID: 3905765059
+    locked: 0
+  - name: Characters
+    uniqueID: 3777999023
     locked: 0
   - name: Monsters
     uniqueID: 2263294203
