@@ -1,5 +1,3 @@
-using System.Collections;
-using UnityEditor.Callbacks;
 using UnityEngine;
 
 namespace RyansNamespace
@@ -9,7 +7,9 @@ namespace RyansNamespace
         {
             typingBarcode,
             scanning,
-            scanned
+            scanned,
+            bagging,
+            bagged
         }
 
         private State currentState = State.typingBarcode;
@@ -27,6 +27,8 @@ namespace RyansNamespace
 
         public void SetUp(Customer customer) => this.customer = customer;
 
+        public State GetState() => currentState;
+
         public override void OnMouseDown()
         {
             switch (currentState)
@@ -42,9 +44,11 @@ namespace RyansNamespace
                         barcode.Hide();
                         isBarcodeShown = false;
                     }
+                    AppManager.instance.sfxManager.PlaySFX("mouse_click", 1f);
                     break;
                 case State.scanning:
                     base.OnMouseDown();
+                    AppManager.instance.sfxManager.PlaySFX("item_pick_up", 1f);
                     break;
             }
         }
@@ -52,31 +56,32 @@ namespace RyansNamespace
         public override void FixedUpdate() {
             base.FixedUpdate();
 
-            if (currentState == State.scanned) {
-                base.RB.MovePosition(base.RB.position + Vector2.left * Time.fixedDeltaTime * 3f);
-
-                if (RB.position.x < Boundaries.instance.GetXMin() - boxCollider.bounds.size.x / 2f) {
-                    customer.SpawnItem();
-                    Destroy(gameObject);
-                }
+            if (currentState == State.bagging) {
+                Debug.Log("me");
+                RB.MovePosition(RB.position + Vector2.left * Time.fixedDeltaTime * 3f);
             }
-        }
-
-        public IEnumerator HandleSuccessfulScan() {
-            yield return StartCoroutine(Display.instance.Handle(Display.State.scanning, true));
-            SetState(State.scanned);
-        }
-
-        public void HandleFailedScan() {
-            StartCoroutine(Display.instance.Handle(Display.State.scanning, false));
         }
 
         public void SetState(State state) {
-            if (state == State.scanning && isBarcodeShown) {
-                barcode.Hide();
-                isBarcodeShown = false;
+            switch (state) {
+                case State.scanning:
+                    if (isBarcodeShown) {
+                        barcode.Hide();
+                        isBarcodeShown = false;
+                        AppManager.instance.sfxManager.PlaySFX("mouse_click", 1f);
+                    }
+                    break;
+                case State.bagging:
+                    base.OnMouseUp();
+                    break;
+                case State.bagged:
+                    customer.SpawnItem();
+                    AppManager.instance.sfxManager.PlaySFX("grocery_bagging", 1f);
+                    Destroy(gameObject);
+                    break;
             }
 
+            Debug.Log("we got here");
             currentState = state;
         }
     }

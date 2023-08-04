@@ -22,13 +22,9 @@ namespace RyansNamespace {
             SpawnCustomer();
         }
 
-        public Vector3 GetCheckoutPoint() {
-            return checkoutPoint.position;
-        }
+        public Vector3 GetCheckoutPoint() => checkoutPoint.position;
 
-        public Vector3 GetDeathPoint() {
-            return deathPoint.position;
-        }
+        public Vector3 GetDeathPoint() => deathPoint.position;
 
         public void SpawnCustomer()
         {

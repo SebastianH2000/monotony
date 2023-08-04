@@ -9,7 +9,8 @@ namespace RyansNamespace {
 
         public enum State {
             typingBarcode,
-            scanning
+            scanning,
+            scanned
         }
 
         [Header("References")]
@@ -66,6 +67,8 @@ namespace RyansNamespace {
                     return;
                 }
 
+                AppManager.instance.sfxManager.PlaySFX("key_" + Random.Range(1, 4).ToString(), 1f);
+
                 displayText.text = "";
 
                 for (int i = 0; i < input.Length; i++)
@@ -78,7 +81,7 @@ namespace RyansNamespace {
             }            
         }
 
-        public IEnumerator Handle(State state, bool success) {            
+        public IEnumerator Handle(State state, bool success) {        
             switch (state) {
                 case State.typingBarcode:
                     yield return new WaitForSeconds(0.5f);

@@ -13,8 +13,9 @@ namespace RyansNamespace {
         {
             if (other.CompareTag("Item"))
             {
-                // If the item is to the right of the scanner, it is being scanned
-                if (transform.position.x + boxCollider.bounds.size.x / 2f < other.transform.position.x)
+                // If the item is to the right of the scanner and the item is in the scanning state, it is being scanned
+                if (transform.position.x + boxCollider.bounds.size.x / 2f < other.transform.position.x &&
+                other.GetComponent<Item>().GetState() == Item.State.scanning)
                     isScanning = true;
             }
         }
@@ -28,12 +29,15 @@ namespace RyansNamespace {
                     isScanning = false;
                     // If the item is to the left of the scanner, it has been scanned
                     if (transform.position.x - boxCollider.bounds.size.x / 2f > other.transform.position.x) {
-                        StartCoroutine(other.GetComponent<Item>().HandleSuccessfulScan());
+                        AppManager.instance.sfxManager.PlaySFX("item_scanned", 1f);
+                        other.GetComponent<Item>().SetState(Item.State.scanned);
+                        StartCoroutine(Display.instance.Handle(Display.State.scanning, true));
                         return;
                     }
                 }
 
-                other.GetComponent<Item>().HandleFailedScan();
+                AppManager.instance.sfxManager.PlaySFX("item_scan_fail", 1f);
+                StartCoroutine(Display.instance.Handle(Display.State.scanning, false));
             }
         }
     }

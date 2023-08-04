@@ -6,7 +6,7 @@ namespace RyansNamespace {
     [RequireComponent(typeof(SFXManager))]
     public class AppManager : MonoBehaviour
     {
-        public AppManager instance { get; private set; }
+        public static AppManager instance { get; private set; }
 
         public SFXManager sfxManager { get; private set; }
 
