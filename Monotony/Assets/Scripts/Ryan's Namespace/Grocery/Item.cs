@@ -1,18 +1,22 @@
+using System.Collections;
+using UnityEditor.Callbacks;
+using UnityEngine;
+
 namespace RyansNamespace
 {    public class Item : Drag
     {
         public enum State
         {
             typingBarcode,
-            scanning
+            scanning,
+            scanned
         }
 
         private State currentState = State.typingBarcode;
         private Barcode barcode;
-        public Customer customer { get; private set; }
+        private Customer customer;
 
         private bool isBarcodeShown = false;
-        private bool isScanning;
 
         // Start is called before the first frame update
         public override void Start()
@@ -45,23 +49,35 @@ namespace RyansNamespace
             }
         }
 
-        public override void OnMouseUp()
-        {
-            if (currentState == State.scanning)
-                base.OnMouseUp();
+        public override void FixedUpdate() {
+            base.FixedUpdate();
+
+            if (currentState == State.scanned) {
+                base.RB.MovePosition(base.RB.position + Vector2.left * Time.fixedDeltaTime * 3f);
+
+                if (RB.position.x < Boundaries.instance.GetXMin() - boxCollider.bounds.size.x / 2f) {
+                    customer.SpawnItem();
+                    Destroy(gameObject);
+                }
+            }
+        }
+
+        public IEnumerator HandleSuccessfulScan() {
+            yield return StartCoroutine(Display.instance.Handle(Display.State.scanning, true));
+            SetState(State.scanned);
+        }
+
+        public void HandleFailedScan() {
+            StartCoroutine(Display.instance.Handle(Display.State.scanning, false));
         }
 
         public void SetState(State state) {
-            switch (state) {
-                case State.scanning:
-                    if (isBarcodeShown) {
-                        barcode.Hide();
-                        isBarcodeShown = false;
-                    }
-
-                    currentState = State.scanning;
-                    break;
+            if (state == State.scanning && isBarcodeShown) {
+                barcode.Hide();
+                isBarcodeShown = false;
             }
+
+            currentState = state;
         }
     }
 }

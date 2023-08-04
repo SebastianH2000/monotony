@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Monster
   - Item
+  - EmailBackground
   layers:
   - Default
   - TransparentFX
@@ -43,23 +44,23 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Environment
+  - name: Background
     uniqueID: 3811637937
     locked: 0
-  - name: UI
-    uniqueID: 3905765059
-    locked: 0
-  - name: Characters
+  - name: Customers
     uniqueID: 3777999023
+    locked: 0
+  - name: Foreground
+    uniqueID: 3779177791
+    locked: 0
+  - name: Interactables
+    uniqueID: 2664440169
     locked: 0
   - name: Monsters
     uniqueID: 2263294203
     locked: 0
   - name: Eyes
     uniqueID: 2938027541
-    locked: 0
-  - name: Interactables
-    uniqueID: 2664440169
     locked: 0
   - name: Player
     uniqueID: 1177663545

@@ -11,7 +11,7 @@ namespace RyansNamespace {
         [SerializeField] private float terminalVelocity;
         private float velocity;
 
-        private Rigidbody2D RB;
+        public Rigidbody2D RB { get; private set; }
         public BoxCollider2D boxCollider { get; private set; }
         private Vector3 mousePos;
         private float offset;
@@ -63,7 +63,7 @@ namespace RyansNamespace {
                 velocity += gravity * Time.fixedDeltaTime;
                 velocity = Mathf.Clamp(velocity, terminalVelocity, float.MaxValue);
 
-                Vector2 clampedPos = new Vector3(Mathf.Clamp(RB.position.x, xMin, xMax),
+                Vector2 clampedPos = new Vector3(RB.position.x,
                 Mathf.Clamp(RB.position.y + velocity * Time.fixedDeltaTime, yMin, yMax));
 
                 RB.MovePosition(clampedPos);

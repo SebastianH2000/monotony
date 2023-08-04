@@ -9,7 +9,6 @@ namespace RyansNamespace {
         [SerializeField] private List<GameObject> customers;
         [SerializeField] private Transform spawnPoint;
         [SerializeField] private Transform checkoutPoint;
-        [SerializeField] private Transform itemSpawnPoint;
         [SerializeField] private Transform deathPoint;
 
         // Start is called before the first frame update
@@ -23,23 +22,23 @@ namespace RyansNamespace {
             SpawnCustomer();
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-            
+        public Vector3 GetCheckoutPoint() {
+            return checkoutPoint.position;
+        }
+
+        public Vector3 GetDeathPoint() {
+            return deathPoint.position;
         }
 
         public void SpawnCustomer()
         {
             if (customers.Count <= 0) {
                 Debug.Log("No more customers to spawn");
-                return;
+            } else {
+                int index = Random.Range(0, customers.Count);
+                GameObject spawnedCustomer = (GameObject)Instantiate(customers[index], spawnPoint.position, Quaternion.identity);
+                customers.RemoveAt(index);
             }
-
-            int index = Random.Range(0, customers.Count);
-            GameObject spawnedCustomemr = (GameObject)Instantiate(customers[index], spawnPoint.position, Quaternion.identity);
-            spawnedCustomemr.GetComponent<Customer>().SetUp(checkoutPoint.position, itemSpawnPoint.position, deathPoint.position);
-            customers.RemoveAt(index);
         }
     }
 }

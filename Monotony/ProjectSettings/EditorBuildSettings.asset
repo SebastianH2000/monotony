@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Web Scene/WebScene.unity
     guid: cb9962b4ca06f364a8cd44c604df28e6
   - enabled: 1
-    path: Assets/Scenes/RyanGroceryScene.unity
+    path: Assets/Scenes/GroceryScene.unity
     guid: 801df133f017945b4a402fcc66fa317f
   m_configObjects: {}

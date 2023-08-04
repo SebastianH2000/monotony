@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 namespace RyansNamespace {
@@ -8,14 +7,13 @@ namespace RyansNamespace {
         private BoxCollider2D boxCollider;
         private bool isScanning = false;
 
-        private void Awake() {
-            boxCollider = GetComponent<BoxCollider2D>();
-        }
+        private void Awake() => boxCollider = GetComponent<BoxCollider2D>();
 
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Item"))
             {
+                // If the item is to the right of the scanner, it is being scanned
                 if (transform.position.x + boxCollider.bounds.size.x / 2f < other.transform.position.x)
                     isScanning = true;
             }
@@ -27,21 +25,16 @@ namespace RyansNamespace {
             {
                 if (isScanning)
                 {
-                    if (transform.position.x - boxCollider.bounds.size.x / 2f > other.transform.position.x) {
-                        StartCoroutine(Success(other.gameObject));
-                    } else {
-                        StartCoroutine(Display.instance.Example(Display.State.scan, false));
-                    }
-
                     isScanning = false;
+                    // If the item is to the left of the scanner, it has been scanned
+                    if (transform.position.x - boxCollider.bounds.size.x / 2f > other.transform.position.x) {
+                        StartCoroutine(other.GetComponent<Item>().HandleSuccessfulScan());
+                        return;
+                    }
                 }
-            }
-        }
 
-        private IEnumerator Success(GameObject other) {
-            yield return StartCoroutine(Display.instance.Example(Display.State.scan, true));
-            Destroy(other);
-            other.GetComponent<Item>().customer.SpawnItem();
+                other.GetComponent<Item>().HandleFailedScan();
+            }
         }
     }
 }

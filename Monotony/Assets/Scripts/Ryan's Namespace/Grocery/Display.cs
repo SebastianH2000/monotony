@@ -8,16 +8,18 @@ namespace RyansNamespace {
         public static Display instance { get; private set; }
 
         public enum State {
-            barcode,
-            scan
+            typingBarcode,
+            scanning
         }
 
+        [Header("References")]
         [SerializeField] private TextMeshProUGUI displayText;
 
         [Header("Barcode")]
         [SerializeField] private string barcodePrompt;
         [SerializeField] private string barcodeSuccessText;
         [SerializeField] private string barcodeFailureText;
+        
         private Item currentItem = null;
         private bool ignoreInput = false;
         private string barcode = "";
@@ -51,9 +53,9 @@ namespace RyansNamespace {
                     if (input.Length == barcode.Length)
                     {
                         if (input == barcode)
-                            StartCoroutine(Example(State.barcode, true));
+                            StartCoroutine(Handle(State.typingBarcode, true));
                         else
-                            StartCoroutine(Example(State.barcode, false));
+                            StartCoroutine(Handle(State.typingBarcode, false));
 
                         ignoreInput = true;
                     }
@@ -76,14 +78,15 @@ namespace RyansNamespace {
             }            
         }
 
-        public IEnumerator Example(State state, bool success) {
+        public IEnumerator Handle(State state, bool success) {            
             switch (state) {
-                case State.barcode:
+                case State.typingBarcode:
                     yield return new WaitForSeconds(0.5f);
                     yield return StartCoroutine(FlashingText(success ? barcodeSuccessText : barcodeFailureText, 3, 0.5f));
-                    
+
                     input = "";
                     displayText.text = success ? scanPrompt : barcodePrompt;
+                    ignoreInput = false;
 
                     if (success) {
                         currentItem.SetState(Item.State.scanning);
@@ -91,9 +94,8 @@ namespace RyansNamespace {
                         currentItem = null;
                     }
 
-                    ignoreInput = false;
                     break;
-                case State.scan:
+                case State.scanning:
                     yield return StartCoroutine(FlashingText(success ? scanSuccessText : scanFailureText, 3, 0.5f)); 
                     break;
             }

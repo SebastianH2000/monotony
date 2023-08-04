@@ -7,28 +7,11 @@ namespace RyansNamespace {
         [SerializeField] private List<GameObject> items;
         [SerializeField] private float speed;
 
-        private Vector3 checkoutPoint;
-        private Vector3 itemSpawnPoint;
-        private Vector3 deathPoint;
-
         private Vector3 target;
-
         private bool arrived = false;
 
         // Start is called before the first frame update
-        void Start()
-        {
-            
-        }
-
-        public void SetUp(Vector3 destination, Vector3 itemSpawnPoint, Vector3 deathPoint)
-        {
-            this.checkoutPoint = destination;
-            this.itemSpawnPoint = itemSpawnPoint;
-            this.deathPoint = deathPoint;
-
-            target = checkoutPoint;
-        }
+        void Start() => target = CustomerManager.instance.GetCheckoutPoint();
 
         // Update is called once per frame
         void Update()
@@ -41,9 +24,9 @@ namespace RyansNamespace {
             if (Vector3.Distance(transform.position, target) < 0.1f) {
                 arrived = true;
 
-                if (target == checkoutPoint) {
+                if (target == CustomerManager.instance.GetCheckoutPoint()) {
                     SpawnItem();
-                } else if (target == deathPoint) {
+                } else if (target == CustomerManager.instance.GetDeathPoint()) {
                     CustomerManager.instance.SpawnCustomer();
                     Destroy(gameObject);
                 }
@@ -52,15 +35,14 @@ namespace RyansNamespace {
 
         public void SpawnItem() {
             if (items.Count <= 0) {
-                target = deathPoint;
+                target = CustomerManager.instance.GetDeathPoint();
                 arrived = false;
-                return;
+            } else {
+                int index = Random.Range(0, items.Count);
+                GameObject spawnedItem = (GameObject)Instantiate(items[index], transform.position, Quaternion.identity);
+                spawnedItem.GetComponent<Item>().SetUp(this);
+                items.RemoveAt(index);
             }
-
-            int index = Random.Range(0, items.Count);
-            GameObject spawnedItem = (GameObject)Instantiate(items[index], itemSpawnPoint, Quaternion.identity);
-            spawnedItem.GetComponent<Item>().SetUp(this);
-            items.RemoveAt(index);
         }
     }
 }
