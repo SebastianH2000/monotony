@@ -8,6 +8,7 @@ namespace SebastiansNamespace {
     {
         public GameObject emailPrefab;
         public GameObject popupPrefab;
+        public GameObject popupPrefabEvil;
 
         public List<Email> emailList = new List<Email>();
 
@@ -186,9 +187,14 @@ namespace SebastiansNamespace {
                 }
 
                 //random pop-ups
-                if (Random.Range(0f,1f) > 0.9996f) 
+                if (Random.Range(0f,1f) > 0.9997f) 
                 {
-                    Instantiate(popupPrefab, this.transform.parent.transform);
+                    if (Random.Range(0f,1f) > 0.5f) {
+                        Instantiate(popupPrefab, this.transform.parent.transform);
+                    }
+                    else {
+                        Instantiate(popupPrefabEvil, this.transform.parent.transform);
+                    }
                 }
             }
             else {
@@ -319,7 +325,7 @@ namespace SebastiansNamespace {
 
         public void emailSent() {
             if (canSend && currentEmailClicked >= 0) {
-                this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<TextMeshProUGUI>().text = "Reply Here";
+                this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Field").gameObject.GetComponent<TextMeshProUGUI>().text = "";
                 this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Input").gameObject.GetComponent<TextMeshProUGUI>().text = "";
                 this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Subject").gameObject.GetComponent<TextMeshProUGUI>().text = "Re:";
                 this.transform.Find("Reply Window").transform.Find("Reply Window Canvas").transform.Find("Reply Recipient").gameObject.GetComponent<TextMeshProUGUI>().text = "To:";

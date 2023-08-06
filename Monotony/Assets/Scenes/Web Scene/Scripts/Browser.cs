@@ -32,9 +32,19 @@ public class Browser : MonoBehaviour
 
     void OnMouseEnter() {
         this.GetComponent<SpriteRenderer>().color = new Color(0.8f,0.8f,0.8f,1);
+
+        if (this.name == "Pop-up Exit Button") {
+            this.GetComponent<SpriteRenderer>().enabled = true;
+        }
     }
 
     void OnMouseExit() {
-        this.GetComponent<SpriteRenderer>().color = new Color (1,1,1,1);
+        if (this.name != "Pop-up Exit Button") {
+            this.GetComponent<SpriteRenderer>().color = new Color (1,1,1,1);
+        }
+
+        if (this.name == "Pop-up Exit Button") {
+            this.GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 }
