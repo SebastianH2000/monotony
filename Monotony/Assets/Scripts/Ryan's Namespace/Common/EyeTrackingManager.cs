@@ -4,7 +4,7 @@ using Tobii.Gaming;
 namespace RyansNamespace {
     public class EyeTrackingManager : MonoBehaviour
     {
-        [SerializeField] private Player player;
+        [SerializeField] private PlayerHealth player;
 
         private float offset;
         private bool isConnected = false;

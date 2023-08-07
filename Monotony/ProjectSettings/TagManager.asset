@@ -11,10 +11,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Toothbrush
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3779177791
+    locked: 0
+  - name: Mirror
+    uniqueID: 3757784947
     locked: 0
   - name: Interactables
     uniqueID: 2664440169
