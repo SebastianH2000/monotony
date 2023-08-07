@@ -11,21 +11,24 @@ namespace RyansNamespace {
         [SerializeField] private float terminalVelocity;
         private float velocity;
 
-        public Rigidbody2D RB { get; private set; }
-        public BoxCollider2D boxCollider { get; private set; }
+        protected Rigidbody2D RB { get; private set; }
+        protected BoxCollider2D boxCollider { get; private set; }
+        protected Vector2 clampedPos { get; private set; }
         private Vector3 mousePos;
         private float offset;
 
         private bool isDragging = false;
 
-        private float xMin;
-        private float xMax;
-        private float yMin;
-        private float yMax;
+        protected float xMin;
+        protected float xMax;
+        protected float yMin;
+        protected float yMax;
 
         public virtual void Awake() {
             RB = GetComponent<Rigidbody2D>();
             boxCollider = GetComponent<BoxCollider2D>();
+
+            clampedPos = RB.position;
         }
 
         // Start is called before the first frame update
@@ -35,15 +38,10 @@ namespace RyansNamespace {
 
             offset = Camera.main.transform.position.z;
 
-            xMin = Boundaries.instance.GetXMin();
-            xMax = Boundaries.instance.GetXMax();
-            yMin = Boundaries.instance.GetYMin();
-            yMax = Boundaries.instance.GetYMax();
-
-            xMin += boxCollider.bounds.size.x / 2f;
-            xMax -= boxCollider.bounds.size.x / 2f;
-            yMin += boxCollider.bounds.size.y / 2f;
-            yMax -= boxCollider.bounds.size.y / 2f;
+            xMin = Boundaries.instance.GetXMin() + boxCollider.bounds.size.x / 2f;
+            xMax = Boundaries.instance.GetXMax() - boxCollider.bounds.size.x / 2f;
+            yMin = Boundaries.instance.GetYMin() + boxCollider.bounds.size.y / 2f;
+            yMax = Boundaries.instance.GetYMax() - boxCollider.bounds.size.x / 2f;
         }
 
         // Update is called once per frame
@@ -57,13 +55,13 @@ namespace RyansNamespace {
             if (isDragging) {
                 mousePos.z = -offset;
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-                Vector3 clampedPos = new Vector3(Mathf.Clamp(worldPos.x, xMin, xMax), Mathf.Clamp(worldPos.y, yMin, yMax), worldPos.z);
+                clampedPos = new Vector3(Mathf.Clamp(worldPos.x, xMin, xMax), Mathf.Clamp(worldPos.y, yMin, yMax), worldPos.z);
                 RB.MovePosition(clampedPos);
             } else if (simulateGravity) {
                 velocity += gravity * Time.fixedDeltaTime;
                 velocity = Mathf.Clamp(velocity, terminalVelocity, float.MaxValue);
 
-                Vector2 clampedPos = new Vector3(RB.position.x,
+                clampedPos = new Vector3(RB.position.x,
                 Mathf.Clamp(RB.position.y + velocity * Time.fixedDeltaTime, yMin, yMax));
 
                 RB.MovePosition(clampedPos);
@@ -76,13 +74,6 @@ namespace RyansNamespace {
                 velocity = 0f;
         }
 
-        public virtual void OnMouseUp() {
-            isDragging = false;
-        }
-
-        public virtual void OnDrawGizmos() {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(new Vector3((xMin + xMax) / 2f, (yMin + yMax) / 2f, 0f), new Vector3(xMax - xMin, yMax - yMin, 0f));
-        }
+        public virtual void OnMouseUp() => isDragging = false;
     }
 }
