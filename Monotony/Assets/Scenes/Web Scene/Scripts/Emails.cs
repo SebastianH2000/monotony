@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace SebastiansNamespace {
     public class Emails : MonoBehaviour
     {
         public GameObject emailPrefab;
         public GameObject popupPrefab;
-        public GameObject popupPrefabEvil;
+        public GameObject[] popupPrefabEvil;
 
         public List<Email> emailList = new List<Email>();
 
@@ -34,6 +35,8 @@ namespace SebastiansNamespace {
         public AudioSource sendEmailAudio;
 
         public AudioSource[] keyboardHitAudio;
+
+        private int emailMax = 0;
 
         // Start is called before the first frame update
         void Start()
@@ -180,8 +183,9 @@ namespace SebastiansNamespace {
                 }
 
                 //random emails
-                if (Random.Range(0f,1f) > 0.9996f) 
+                if (Random.Range(0f,1f) > 0.9996f && emailMax > 0) 
                 {
+                    emailMax --;
                     emailRecievedAudio.Play();
                     addEmail();
                 }
@@ -193,7 +197,7 @@ namespace SebastiansNamespace {
                         Instantiate(popupPrefab, this.transform.parent.transform);
                     }
                     else {
-                        Instantiate(popupPrefabEvil, this.transform.parent.transform);
+                        Instantiate(popupPrefabEvil[Random.Range(0,popupPrefabEvil.Length)], this.transform.parent.transform);
                     }
                 }
             }
@@ -229,11 +233,11 @@ namespace SebastiansNamespace {
             if (emailList.Count > 0 && emailList[emailList.Count - 1].isShifting) {
                 currentEmail.isShifting = true;
                 currentEmail.shiftTimer = emailList[emailList.Count - 1].shiftTimer;
-                currentEmail.shiftPos1 = new Vector3(0,(0.33f - (0.09f * (emailList.Count + 1))),-0.1f);
-                currentEmail.shiftPos2 = new Vector3(0,(0.33f - (0.09f * emailList.Count)),-0.1f);
+                currentEmail.shiftPos1 = new Vector3(0,(0.44f - (0.09f * (emailList.Count + 1))),-0.1f);
+                currentEmail.shiftPos2 = new Vector3(0,(0.44f - (0.09f * emailList.Count)),-0.1f);
             }
             else {
-                currentEmail.emailObject.transform.localPosition = new Vector3(0,(0.33f - (0.09f * emailList.Count)),-0.1f);
+                currentEmail.emailObject.transform.localPosition = new Vector3(0,(0.44f - (0.09f * emailList.Count)),-0.1f);
             }
             //currentEmail.emailObject.transform.Find("Canvas").transform.Find("Subject").gameObject.GetComponent<TextMeshProUGUI>().text = emailList.Count.ToString();
             if (Random.Range(0f,1f) > 0.66f) {
@@ -247,7 +251,7 @@ namespace SebastiansNamespace {
                 currentEmail.subject = workSubjects[currentEmail.replyIndex];
                 currentEmail.replyString = workReplySubjects[currentEmail.replyIndex];
             }
-            else if (Random.Range(0f,1f) > 0.33f) {
+            else if (Random.Range(0f,1f) > 0.44f) {
                 //school
                 currentEmail.isUrgent = true;
                 currentEmail.author = "School";
@@ -295,9 +299,18 @@ namespace SebastiansNamespace {
                 emailList[i].isShifting = true;
                 emailList[i].shiftTimer = 0;
                 emailList[i].shiftPos1 = emailList[i].emailObject.transform.localPosition;
-                emailList[i].shiftPos2 = new Vector3(0,(0.33f - (0.09f * i)),-0.1f);
+                emailList[i].shiftPos2 = new Vector3(0,(0.44f - (0.09f * i)),-0.1f);
             }
             sendEmailAudio.Play();
+            if (emailMax == 0 && emailList.Count == 0) {
+                Debug.Log("H");
+                SceneManager.LoadScene("MainMenuScene");
+            }
+            else if (emailMax > 0 && emailList.Count == 0) {
+                emailMax --;
+                emailRecievedAudio.Play();
+                addEmail();
+            }
         }
 
         public void emailClicked(int emailID) {

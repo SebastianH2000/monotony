@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 535661022530124099}
   - component: {fileID: 8494147594881116592}
   - component: {fileID: 9008858870020468397}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Random Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -39,6 +39,9 @@ namespace SebastiansNamespace {
         private bool canSend = true;
 
         private bool waitingForTeacher = false;
+
+        public AudioSource[] keyboardHitAudio;
+
         void Start()
         {
             for (int i = 0; i < 7; i++) {
@@ -110,10 +113,8 @@ namespace SebastiansNamespace {
 
                 if ((char.IsLetter(key) || key == " "[0]) && input.Length < targetString.Length)
                 {
-                    Debug.Log(Input.inputString);
-                    Debug.Log(targetString);
-                    Debug.Log(currentSlide);
                     input += key;
+                    keyboardHitAudio[Random.Range(0,(keyboardHitAudio.Length))].Play();
 
                     if (input.Length == targetString.Length)
                     {
@@ -159,6 +160,7 @@ namespace SebastiansNamespace {
                 handLeftRaising.GetComponent<SpriteRenderer>().enabled = true;
                 StartCoroutine(handTimer());
             }
+            Debug.Log("HAND");
         }
 
         IEnumerator handTimer() {

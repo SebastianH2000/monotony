@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7363244345121113474}
   - component: {fileID: 723726175326514425}
   - component: {fileID: 96084055991489052}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Monster Part
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1285676284664018118}
   - component: {fileID: 4431196899328370882}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EyeSpiral
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -18,6 +18,7 @@ public class Hand : MonoBehaviour
     }
 
     private void OnMouseDown() {
+        Debug.Log("HAND");
         GameObject.Find("Class Controller").GetComponent<ClassScript>().clickHand();
     }
 }

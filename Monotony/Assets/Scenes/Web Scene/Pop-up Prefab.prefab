@@ -162,6 +162,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 77d87c1310b487e4ebdd6f1d105b3818, type: 3}
   - {fileID: 21300000, guid: 4849166e2159db04a8d9b0e6a0718abe, type: 3}
   - {fileID: 21300000, guid: ec17d05f9b4f9204b868a0a335df86da, type: 3}
+  canSetSprite: 1
 --- !u!50 &6741671961687894460
 Rigidbody2D:
   serializedVersion: 4

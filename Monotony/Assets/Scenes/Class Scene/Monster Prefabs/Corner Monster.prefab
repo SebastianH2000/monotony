@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1647669945843184910}
   - component: {fileID: 1647669945843184909}
   - component: {fileID: 1647669945843184908}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Monster Back
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -809,7 +809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1647669946574241230}
   - component: {fileID: 1647669946574241229}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Corner Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
