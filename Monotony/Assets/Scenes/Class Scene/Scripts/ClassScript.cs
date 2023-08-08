@@ -42,6 +42,12 @@ namespace SebastiansNamespace {
 
         public AudioSource[] keyboardHitAudio;
 
+        public GameObject teacherStandingMonster;
+        public GameObject teacherQuestionMonster;
+        private bool isMonster = true;
+        private float monsterTimer = 0;
+        private float monsterTarget = 0;
+
         void Start()
         {
             for (int i = 0; i < 7; i++) {
@@ -61,11 +67,38 @@ namespace SebastiansNamespace {
             teacherAsking.GetComponent<SpriteRenderer>().enabled = false;
 
             handLeftRaising.GetComponent<SpriteRenderer>().enabled = false;
+
+            teacherStandingMonster.GetComponent<ClassMonster>().hide();
+            teacherQuestionMonster.GetComponent<ClassMonster>().hide();
         }
 
         // Update is called once per frame
         void Update()
         {
+            if (monsterTimer > monsterTarget) {
+                monsterTimer = 0;
+                isMonster = !isMonster;
+                if (isMonster) {
+                    monsterTarget = Random.Range(5f,15f);
+                    if (waitingForTeacher) {
+                        teacherQuestionMonster.GetComponent<ClassMonster>().show();
+                    }
+                    else {
+                        teacherStandingMonster.GetComponent<ClassMonster>().show();
+                    }
+                    teacherStanding.GetComponent<SpriteRenderer>().enabled = false;
+                    teacherAsking.GetComponent<SpriteRenderer>().enabled = false;
+                }
+                else {
+                    monsterTarget = Random.Range(5f,5f);
+                    teacherStandingMonster.GetComponent<ClassMonster>().hide();
+                    teacherQuestionMonster.GetComponent<ClassMonster>().hide();
+                    teacherStanding.GetComponent<SpriteRenderer>().enabled = true;
+                }
+            }
+            else {
+                monsterTimer += Time.deltaTime;
+            }
             //teacher questions
             /*if (teacherQuestionTimer > teacherQuestionTarget && handClicked == true) {
                 teacherStanding.GetComponent<SpriteRenderer>().enabled = false;
@@ -79,7 +112,7 @@ namespace SebastiansNamespace {
 
             if (waitingForTeacher) {
                 teacherQuestionTimer += Time.deltaTime;
-                if (teacherQuestionTimer > 0.5f) {
+                if (teacherQuestionTimer > 0.5f && !isMonster) {
                     teacherStanding.GetComponent<SpriteRenderer>().enabled = false;
                     teacherAsking.GetComponent<SpriteRenderer>().enabled = true;
 
@@ -155,7 +188,8 @@ namespace SebastiansNamespace {
         }
 
         public void clickHand() {
-            if (teacherQuestionTimer > 0.5f && handClicked == false) {
+            Debug.Log("HA");
+            if (teacherQuestionTimer > 0.5f && handClicked == false && !isMonster) {
                 handLeftResting.GetComponent<SpriteRenderer>().enabled = false;
                 handLeftRaising.GetComponent<SpriteRenderer>().enabled = true;
                 StartCoroutine(handTimer());

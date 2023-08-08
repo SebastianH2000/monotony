@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Web Scene/WebScene.unity
     guid: cb9962b4ca06f364a8cd44c604df28e6
+  - enabled: 1
+    path: Assets/Scenes/1 - video.unity
+    guid: f259ea2790c8289439efa53611b341ad
   m_configObjects: {}

@@ -11,6 +11,7 @@ namespace SebastiansNamespace {
         void Start()
         {
             waitingTarget = Random.Range(0f,1.2f);
+            this.transform.Find("Monster Part").gameObject.GetComponent<SpriteRenderer>().sortingOrder = this.transform.parent.gameObject.GetComponent<SpriteRenderer>().sortingOrder;
         }
 
         // Update is called once per frame

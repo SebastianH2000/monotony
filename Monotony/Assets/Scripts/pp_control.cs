@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using SebastiansNamespace;
 
 public class pp_control : MonoBehaviour
 {
@@ -38,6 +39,11 @@ public class pp_control : MonoBehaviour
 
     void Update()
     {
+        vignetteIntensity = Mathf.Lerp(0.1f,0.3f,SavePlayerData.monsterDistance/4);
+        //overrides
+        sanityPercent = SavePlayerData.sanity*100;
+        lookingAtMonster = SavePlayerData.lookingAtMonster;
+
         if (lookingAtMonster && volume.profile.TryGet<Vignette>(out vignette))
         {
             vignette.intensity.value = vignetteIntensity;

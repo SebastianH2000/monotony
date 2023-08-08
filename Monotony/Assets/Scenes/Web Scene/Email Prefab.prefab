@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1684294789340077071}
   - component: {fileID: 4552699188342991528}
   - component: {fileID: 818486772977951842}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Subject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 8854317830249451147}
   - component: {fileID: 8854317830249451145}
   - component: {fileID: 8854317830249451146}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Author
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 8854317830426923776}
   - component: {fileID: 8854317830426924030}
   - component: {fileID: 8854317830426924031}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 8854317831138279887}
   - component: {fileID: 8854317831138279888}
   - component: {fileID: 8854317831138279889}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -829,7 +829,7 @@ GameObject:
   - component: {fileID: 8854317831498577263}
   - component: {fileID: 8854317831498577261}
   - component: {fileID: 8854317831498577262}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Urgency
   m_TagString: Untagged
   m_Icon: {fileID: 0}

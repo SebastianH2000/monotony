@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 204638427}
   - component: {fileID: 204638429}
   - component: {fileID: 204638428}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Email Tab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 372545757}
   - component: {fileID: 372545759}
   - component: {fileID: 372545758}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Reply Header
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -715,7 +715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 425052985}
   - component: {fileID: 425052986}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Reply Window Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -948,7 +948,7 @@ GameObject:
   - component: {fileID: 579270989}
   - component: {fileID: 579270991}
   - component: {fileID: 579270990}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Browser Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1093,7 +1093,7 @@ GameObject:
   - component: {fileID: 596040182}
   - component: {fileID: 596040181}
   - component: {fileID: 596040180}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Tabs Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1195,7 @@ GameObject:
   - component: {fileID: 601560093}
   - component: {fileID: 601560092}
   - component: {fileID: 601560091}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ExcitementCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1450,7 +1450,7 @@ GameObject:
   - component: {fileID: 709773520}
   - component: {fileID: 709773519}
   - component: {fileID: 709773518}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Reply Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1597,7 +1597,7 @@ GameObject:
   - component: {fileID: 717963087}
   - component: {fileID: 717963089}
   - component: {fileID: 717963088}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Reply Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2167,7 +2167,7 @@ GameObject:
   - component: {fileID: 1013485063}
   - component: {fileID: 1013485065}
   - component: {fileID: 1013485064}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Send Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2302,7 +2302,7 @@ GameObject:
   - component: {fileID: 1025955906}
   - component: {fileID: 1025955908}
   - component: {fileID: 1025955907}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Reply Recipient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2437,7 +2437,7 @@ GameObject:
   - component: {fileID: 1030657038}
   - component: {fileID: 1030657040}
   - component: {fileID: 1030657039}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Email Count Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2572,7 +2572,7 @@ GameObject:
   - component: {fileID: 1170630210}
   - component: {fileID: 1170630212}
   - component: {fileID: 1170630211}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Reply Prompt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3065,7 +3065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1269539799}
   - component: {fileID: 1269539800}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Reply Header Background (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3150,7 +3150,7 @@ GameObject:
   - component: {fileID: 1323606501}
   - component: {fileID: 1323606503}
   - component: {fileID: 1323606502}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Reply Subject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3284,7 +3284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1460083737}
   - component: {fileID: 1460083738}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3650,7 +3650,7 @@ GameObject:
   - component: {fileID: 1614151737}
   - component: {fileID: 1614151736}
   - component: {fileID: 1614151735}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Reply Window Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3755,7 +3755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1622935357}
   - component: {fileID: 1622935358}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Reply Header Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3840,7 +3840,7 @@ GameObject:
   - component: {fileID: 1809393827}
   - component: {fileID: 1809393829}
   - component: {fileID: 1809393828}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Reply Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4107,7 +4107,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -4130,7 +4130,7 @@ GameObject:
   - component: {fileID: 1944259814}
   - component: {fileID: 1944259813}
   - component: {fileID: 1944259812}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Send Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4263,6 +4263,139 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2040919848
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 106314385555086453, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 106314385555086453, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1421948145553945292, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228022523119813140, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3344738386447556547, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780600277954552620, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6860978690120912061, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086083988599373626, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 17.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10.0125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660289151304284560, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8255067626812758482, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377058969736021232, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_Name
+      value: SceneUI
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
 --- !u!1 &2106769823
 GameObject:
   m_ObjectHideFlags: 0

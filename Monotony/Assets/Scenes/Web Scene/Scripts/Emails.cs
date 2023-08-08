@@ -36,7 +36,12 @@ namespace SebastiansNamespace {
 
         public AudioSource[] keyboardHitAudio;
 
-        private int emailMax = 0;
+        private int emailMax = 5;
+
+        private float safePopupTimer = 0;
+        private float safePopupTarget = 0;
+        private float monsterPopupTimer = 0;
+        private float monsterPopupTarget = 0;
 
         // Start is called before the first frame update
         void Start()
@@ -92,6 +97,11 @@ namespace SebastiansNamespace {
             emailTimes.Add("3:09AM");
             emailTimes.Add("4:34AM");
             emailTimes.Add("3 FREAKING AM");
+
+            safePopupTimer = 0;
+            safePopupTarget = Random.Range(3f,8f);
+            monsterPopupTimer = 0;
+            monsterPopupTarget = Random.Range(3f,8f);
 
             StartEmails();
         }
@@ -191,7 +201,7 @@ namespace SebastiansNamespace {
                 }
 
                 //random pop-ups
-                if (Random.Range(0f,1f) > 0.9997f) 
+                /*if (Random.Range(0f,1f) > 0.9997f) 
                 {
                     if (Random.Range(0f,1f) > 0.5f) {
                         Instantiate(popupPrefab, this.transform.parent.transform);
@@ -199,6 +209,23 @@ namespace SebastiansNamespace {
                     else {
                         Instantiate(popupPrefabEvil[Random.Range(0,popupPrefabEvil.Length)], this.transform.parent.transform);
                     }
+                }*/
+
+                if (monsterPopupTimer > monsterPopupTarget) {
+                    Instantiate(popupPrefabEvil[Random.Range(0,popupPrefabEvil.Length)], this.transform.parent.transform);
+                    monsterPopupTimer = 0;
+                    monsterPopupTarget = Random.Range(6f,10f);
+                }
+                else {
+                    monsterPopupTimer += Time.deltaTime;
+                }
+                if (safePopupTimer > safePopupTarget) {
+                    Instantiate(popupPrefab, this.transform.parent.transform);
+                    safePopupTimer = 0;
+                    safePopupTarget = Random.Range(6f,10f);
+                }
+                else {
+                    safePopupTimer += Time.deltaTime;
                 }
             }
             else {
@@ -216,11 +243,11 @@ namespace SebastiansNamespace {
             addEmail();
             addEmail();
             addEmail();
-            /*addEmail();
             addEmail();
             addEmail();
             addEmail();
-            addEmail();*/
+            addEmail();
+            addEmail();
 
             //removeEmail(0);
         }
@@ -303,7 +330,6 @@ namespace SebastiansNamespace {
             }
             sendEmailAudio.Play();
             if (emailMax == 0 && emailList.Count == 0) {
-                Debug.Log("H");
                 SceneManager.LoadScene("MainMenuScene");
             }
             else if (emailMax > 0 && emailList.Count == 0) {

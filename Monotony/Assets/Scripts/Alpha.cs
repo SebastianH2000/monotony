@@ -50,12 +50,24 @@ public class Alpha : MonoBehaviour
             {
                 child.GetComponent<BoxCollider2D>().enabled = false;
             }
+
+            Collider2D[] Colliderchildren = GetComponentsInChildren<Collider2D>();
+            foreach (Collider2D child in Colliderchildren)
+            {
+                child.GetComponent<Collider2D>().enabled = false;
+            }
         }
         else {
             BoxCollider2D[] Boxchildren = GetComponentsInChildren<BoxCollider2D>();
             foreach (BoxCollider2D child in Boxchildren)
             {
                 child.GetComponent<BoxCollider2D>().enabled = true;
+            }
+
+            Collider2D[] Colliderchildren = GetComponentsInChildren<Collider2D>();
+            foreach (Collider2D child in Colliderchildren)
+            {
+                child.GetComponent<Collider2D>().enabled = true;
             }
         }
     }
