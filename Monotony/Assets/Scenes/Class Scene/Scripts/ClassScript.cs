@@ -25,7 +25,6 @@ namespace SebastiansNamespace {
         private int currentSlide = 0;
 
         private float teacherQuestionTimer = 0;
-        private float teacherQuestionTarget = 0.5f;
 
         private float slideStartTimer = 0;
 
@@ -41,6 +40,8 @@ namespace SebastiansNamespace {
         private bool waitingForTeacher = false;
 
         public AudioSource[] keyboardHitAudio;
+        public AudioSource[] questionAudio;
+        public AudioSource correctAudio;
 
         public GameObject teacherStandingMonster;
         public GameObject teacherQuestionMonster;
@@ -75,126 +76,125 @@ namespace SebastiansNamespace {
         // Update is called once per frame
         void Update()
         {
-            if (monsterTimer > monsterTarget) {
-                monsterTimer = 0;
-                isMonster = !isMonster;
-                if (isMonster) {
-                    monsterTarget = Random.Range(5f,15f);
-                    if (waitingForTeacher) {
-                        teacherQuestionMonster.GetComponent<ClassMonster>().show();
-                    }
-                    else {
-                        teacherStandingMonster.GetComponent<ClassMonster>().show();
-                    }
-                    teacherStanding.GetComponent<SpriteRenderer>().enabled = false;
-                    teacherAsking.GetComponent<SpriteRenderer>().enabled = false;
-                }
-                else {
-                    monsterTarget = Random.Range(5f,5f);
-                    teacherStandingMonster.GetComponent<ClassMonster>().hide();
-                    teacherQuestionMonster.GetComponent<ClassMonster>().hide();
-                    teacherStanding.GetComponent<SpriteRenderer>().enabled = true;
-                }
-            }
-            else {
-                monsterTimer += Time.deltaTime;
-            }
-            //teacher questions
-            /*if (teacherQuestionTimer > teacherQuestionTarget && handClicked == true) {
-                teacherStanding.GetComponent<SpriteRenderer>().enabled = false;
-                teacherAsking.GetComponent<SpriteRenderer>().enabled = true;
-
-                handClicked = false;
-            }
-            else {
-                teacherQuestionTimer += Time.deltaTime;
-            }*/
-
-            if (waitingForTeacher) {
-                teacherQuestionTimer += Time.deltaTime;
-                if (teacherQuestionTimer > 0.5f && !isMonster) {
-                    teacherStanding.GetComponent<SpriteRenderer>().enabled = false;
-                    teacherAsking.GetComponent<SpriteRenderer>().enabled = true;
-
-                    handClicked = false;
-                }
-            }
-
-            //slides
-            if (slideStartTimer > 3) {
-                slideStartTimer = -1;
-                currentSlide = Random.Range(0,slideShownList.Count);
-                slideShownList[currentSlide].GetComponent<SpriteRenderer>().enabled = true;
-                if (slideAnswers[currentSlide].Length == 2) {
-                    check3.GetComponent<SpriteRenderer>().enabled = false;
-                }
-                else {
-                    check3.GetComponent<SpriteRenderer>().enabled = true;
-                }
-            }
-            else if (slideStartTimer > -1) {
-                slideStartTimer += Time.deltaTime;
-            }
-
-
-            //input
-            //string targetString = "he";
-            string targetString = slideAnswers[currentSlide][slideAnswerPosition];
-            if (Input.inputString.Length > 0 && canSend)
-            {
-                char key = Input.inputString[0];
-
-                if ((char.IsLetter(key) || key == " "[0]) && input.Length < targetString.Length)
-                {
-                    input += key;
-                    keyboardHitAudio[Random.Range(0,(keyboardHitAudio.Length))].Play();
-
-                    if (input.Length == targetString.Length)
-                    {
-                        if (input.ToLower() == targetString.ToLower()) {
-                            input = "";
-                            computerText.GetComponent<TextMeshProUGUI>().text = input;
-                            if (slideAnswerPosition < (slideAnswers[currentSlide].Length-1)) {
-                                //checkboxes
-                                check1.GetComponent<Checkbox>().On();
-                                if (slideAnswerPosition == 1) {
-                                    check2.GetComponent<Checkbox>().On();
-                                }
-                                slideAnswerPosition++;
-                            }
-                            else {
-                                if (slideAnswerPosition == 1) {
-                                    check2.GetComponent<Checkbox>().On();
-                                }
-                                if (check3.GetComponent<SpriteRenderer>().enabled) {
-                                    check3.GetComponent<Checkbox>().On();
-                                }
-                                waitingForTeacher = true;
-                            }
+            if (GameObject.Find("IntroCard") && !GameObject.Find("IntroCard").GetComponent<IntroCard>().isShown) {
+                if (monsterTimer > monsterTarget) {
+                    monsterTimer = 0;
+                    isMonster = !isMonster;
+                    if (isMonster) {
+                        monsterTarget = Random.Range(3f,5f);
+                        if (waitingForTeacher) {
+                            teacherQuestionMonster.GetComponent<ClassMonster>().show();
                         }
                         else {
-                            computerText.GetComponent<TextMeshProUGUI>().text = input;
-                            return;
+                            teacherStandingMonster.GetComponent<ClassMonster>().show();
                         }
+                        teacherStanding.GetComponent<SpriteRenderer>().enabled = false;
+                        teacherAsking.GetComponent<SpriteRenderer>().enabled = false;
                     }
-                } else if (key == '\b' && input.Length >= 1)
-                {
-                    input = input.Remove(input.Length - 1);
-                } else {
-                    return;
+                    else {
+                        monsterTarget = Random.Range(10f,20f);
+                        teacherStandingMonster.GetComponent<ClassMonster>().hide();
+                        teacherQuestionMonster.GetComponent<ClassMonster>().hide();
+                        teacherStanding.GetComponent<SpriteRenderer>().enabled = true;
+                    }
                 }
-                computerText.GetComponent<TextMeshProUGUI>().text = input;
-            }            
+                else {
+                    monsterTimer += Time.deltaTime;
+                }
+
+                if (waitingForTeacher) {
+                    teacherQuestionTimer += Time.deltaTime;
+                    if (teacherQuestionTimer > 0.5f && !isMonster) {
+                        teacherStanding.GetComponent<SpriteRenderer>().enabled = false;
+                        teacherAsking.GetComponent<SpriteRenderer>().enabled = true;
+                        teacherQuestionTimer = -100;
+                        questionAudio[Random.Range(0,(questionAudio.Length))].Play();
+
+                        handClicked = false;
+                    }
+                }
+
+                //slides
+                if (slideStartTimer > 1.5f) {
+                    slideStartTimer = -1;
+                    currentSlide = Random.Range(0,slideShownList.Count);
+                    slideShownList[currentSlide].GetComponent<SpriteRenderer>().enabled = true;
+                    if (slideAnswers[currentSlide].Length == 2) {
+                        check3.GetComponent<SpriteRenderer>().enabled = false;
+                    }
+                    else {
+                        check3.GetComponent<SpriteRenderer>().enabled = true;
+                    }
+                }
+                else if (slideStartTimer > -1) {
+                    slideStartTimer += Time.deltaTime;
+                }
+
+
+                //input
+                //string targetString = "he";
+                string targetString = slideAnswers[currentSlide][slideAnswerPosition];
+                if (Input.inputString.Length > 0 && canSend)
+                {
+                    char key = Input.inputString[0];
+
+                    if ((char.IsLetter(key) || (key == " "[0] && input.Length > 0)) && input.Length < targetString.Length)
+                    {
+                        input += key;
+                        keyboardHitAudio[Random.Range(0,(keyboardHitAudio.Length))].Play();
+
+                        if (input.Length == targetString.Length)
+                        {
+                            if (input.ToLower() == targetString.ToLower()) {
+                                correctAudio.Play();
+                                input = "";
+                                computerText.GetComponent<TextMeshProUGUI>().text = input;
+                                if (slideAnswerPosition < (slideAnswers[currentSlide].Length-1)) {
+                                    //checkboxes
+                                    check1.GetComponent<Checkbox>().On();
+                                    if (slideAnswerPosition == 1) {
+                                        check2.GetComponent<Checkbox>().On();
+                                    }
+                                    slideAnswerPosition++;
+                                }
+                                else {
+                                    if (slideAnswerPosition == 1) {
+                                        check2.GetComponent<Checkbox>().On();
+                                    }
+                                    if (check3.GetComponent<SpriteRenderer>().enabled) {
+                                        check3.GetComponent<Checkbox>().On();
+                                    }
+                                    if (slideShownList.Count > 3) {
+                                        waitingForTeacher = true;
+                                    }
+                                    else {
+                                        GameObject.Find("FadeOut").GetComponent<FadeOut>().isFading = true;
+                                    }
+                                }
+                            }
+                            else {
+                                computerText.GetComponent<TextMeshProUGUI>().text = input;
+                                return;
+                            }
+                        }
+                    } else if (key == '\b' && input.Length >= 1)
+                    {
+                        input = input.Remove(input.Length - 1);
+                    } else {
+                        return;
+                    }
+                    computerText.GetComponent<TextMeshProUGUI>().text = input;
+                }            
+            }
         }
 
         public void clickHand() {
             Debug.Log("HA");
-            if (teacherQuestionTimer > 0.5f && handClicked == false && !isMonster) {
+            if (handClicked == false && !isMonster) {
                 handLeftResting.GetComponent<SpriteRenderer>().enabled = false;
                 handLeftRaising.GetComponent<SpriteRenderer>().enabled = true;
                 StartCoroutine(handTimer());
             }
-            Debug.Log("HAND");
         }
 
         IEnumerator handTimer() {
@@ -206,9 +206,6 @@ namespace SebastiansNamespace {
             handLeftRaising.GetComponent<SpriteRenderer>().enabled = false;
 
             waitingForTeacher = false;
-            teacherQuestionTimer = 0f;
-
-            teacherQuestionTarget = Random.Range(3f,5f);
             teacherQuestionTimer = 0f;
             handClicked = true;
             newSlide();

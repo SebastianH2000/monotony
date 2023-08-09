@@ -1,0 +1,354 @@
+fileFormatVersion: 2
+guid: 676e44562143cb641a181a8cc0c6a99d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 227
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
+        (~4 frames)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25320b878b962f1438cfc070b4064b0c
+      internalID: 783035934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
+        (~4 frames)_1
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5732dc3761b0ad940ad6dbcbeb913ca2
+      internalID: 126803297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
+        (~4 frames)_2
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58585651691874c42adc2199d6a9894f
+      internalID: -67848232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
+        (~4 frames)_3
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de0589030792ec4e9839371c7bc4698
+      internalID: -29978482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
+        (~4 frames)_4
+      rect:
+        serializedVersion: 2
+        x: 2832
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e81b85ae8b37a4cafc5111681a34d1
+      internalID: -146300444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
+        (~4 frames)_5
+      rect:
+        serializedVersion: 2
+        x: 3540
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004209f99aed6d14f9a6d1948df74171
+      internalID: -598003750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
+        (~4 frames)_6
+      rect:
+        serializedVersion: 2
+        x: 4248
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f46f655058900b4faabb31d4ce87cad
+      internalID: 739859403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
+        (~4 frames)_7
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062391a964746d6408ad05191080d0e8
+      internalID: 2047841559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
+        (~4 frames)_8
+      rect:
+        serializedVersion: 2
+        x: 5664
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83876f5fb89bbd44ba5d47c2ac7b76b
+      internalID: -1116831174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_0: 783035934
+      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_1: 126803297
+      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_2: -67848232
+      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_3: -29978482
+      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_4: -146300444
+      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_5: -598003750
+      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_6: 739859403
+      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_7: 2047841559
+      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_8: -1116831174
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

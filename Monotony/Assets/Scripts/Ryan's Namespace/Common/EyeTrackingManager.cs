@@ -27,20 +27,21 @@ namespace RyansNamespace {
         // Update is called once per frame
         void Update()
         {
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            visionLocation.transform.position = new Vector3(worldPos.x,worldPos.y,-5);
             if (!isConnected || TobiiAPI.GetUserPresence() != UserPresence.Present)
                 //return;
 
             //GazePoint gazePoint = TobiiAPI.GetGazePoint();
-            //if (gazePoint.IsValid)
-            if (true)
+            //if (gazePoint.IsValid && GameObject.Find("IntroCard"))
+            if (true && GameObject.Find("IntroCard") && !GameObject.Find("IntroCard").GetComponent<IntroCard>().isShown)
             {
                 //Vector3 screenPos = gazePoint.Screen;
                 //screenPos.z = -offset;
                 //Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
-                Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
                 //visionLocation.transform.position = worldPos;
-                visionLocation.transform.position = new Vector3(worldPos.x,worldPos.y,-5);
 
                 //Collider2D collider = Physics2D.Raycast(worldPos, Vector2.zero).collider;
 

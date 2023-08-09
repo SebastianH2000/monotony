@@ -36,7 +36,7 @@ namespace SebastiansNamespace {
 
         public AudioSource[] keyboardHitAudio;
 
-        private int emailMax = 5;
+        private int emailMax = 2;
 
         private float safePopupTimer = 0;
         private float safePopupTarget = 0;
@@ -246,8 +246,8 @@ namespace SebastiansNamespace {
             addEmail();
             addEmail();
             addEmail();
-            addEmail();
-            addEmail();
+            //addEmail();
+            //addEmail();
 
             //removeEmail(0);
         }
@@ -330,7 +330,7 @@ namespace SebastiansNamespace {
             }
             sendEmailAudio.Play();
             if (emailMax == 0 && emailList.Count == 0) {
-                SceneManager.LoadScene("MainMenuScene");
+                GameObject.Find("FadeOut").GetComponent<FadeOut>().isFading = true;
             }
             else if (emailMax > 0 && emailList.Count == 0) {
                 emailMax --;

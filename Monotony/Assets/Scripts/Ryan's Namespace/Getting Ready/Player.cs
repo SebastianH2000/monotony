@@ -10,6 +10,7 @@ namespace RyansNamespace {
         [SerializeField] private GameObject toothbrushCheckmark;
         [SerializeField] private GameObject hairbrushCheckmark;
         [SerializeField] private GameObject skincareCheckmark;
+        private bool hasBrushedTeeth = false;
 
         public enum State
         {
@@ -40,6 +41,7 @@ namespace RyansNamespace {
             {
                 characterSpriteDictionary.Add(sprite.name, sprite);
             }
+            Camera.main.depth = -1;
         }
 
         public void CompleteHairTask()
@@ -67,6 +69,7 @@ namespace RyansNamespace {
             currentState &= ~State.BrushingTeeth;
             toothbrushCheckmark.SetActive(true);
             UpdateCharacterSprite();
+            hasBrushedTeeth = true;
         }
 
         private Sprite GetCharacterSprite()
@@ -95,6 +98,13 @@ namespace RyansNamespace {
             }
         }
 
-        private void UpdateCharacterSprite() => SR.sprite = GetCharacterSprite();
+        private void UpdateCharacterSprite() 
+        {
+            Debug.Log(GetCharacterSprite().name);
+            if (GetCharacterSprite().name == "Hair Done Skincare Done" && hasBrushedTeeth) {
+                GameObject.Find("FadeOut").GetComponent<FadeOut>().isFading = true;
+            }
+            SR.sprite = GetCharacterSprite();
+        }
     }
 }

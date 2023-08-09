@@ -14,6 +14,7 @@ namespace SebastiansNamespace
         private bool menuOpen = true;
         private string[] taskArray = new string[4];
         private bool[] completedArray = new bool[4];
+        private int taskNumber = 0;
 
         private float changingTimer = 0f;
         
@@ -22,7 +23,8 @@ namespace SebastiansNamespace
         {
             changingTimer = 0;
             textSelections[Random.Range(0,textSelections.Length)] = 1f;
-            taskArray = new string[4] {"Getting Ready","School","Grocery","Web"};
+            //taskArray = new string[4] {"GettingReady","Class","Grocery","Web"};
+            taskArray = new string[4] {"GettingReady","Class","Grocery","Web"};
             for (int i = 0; i < SavePlayerData.completedArray.Length; i++) {
                 SavePlayerData.completedArray[i] = false;
             }
@@ -62,7 +64,7 @@ namespace SebastiansNamespace
                     float textColorB = Mathf.Lerp(0.42f,0.63f,textSelections[i]);
                     textArray[i].GetComponent<TextMeshProUGUI>().color = new Color(textColorR,textColorG,textColorB,1);
                     textArray[i].transform.localScale = new Vector3(1.4f+textSelections[i],1.4f+textSelections[i],1);
-                    textArray[i].transform.position = new Vector3(0,screenYPos,0);
+                    textArray[i].transform.position = new Vector3(0,screenYPos-textSelections[i]/3.5f,0);
                     screenYPos += -0.8f*(textSelections[i]/3f+0.8f);
                 }
             }
@@ -75,15 +77,30 @@ namespace SebastiansNamespace
         }
 
         void OnMouseDown() {
+            GameObject.Find("FadeOut").GetComponent<FadeOut>().isFading = true;
+            //nextScene();
+        }
+        public void nextScene() {
             if (!SavePlayerData.hasWatchedIntro) {
-                SceneManager.LoadScene("IntroVideo");
+                SavePlayerData.taskNumber++;
                 SavePlayerData.lastTask = SavePlayerData.currentTask;
                 SavePlayerData.currentTask = SavePlayerData.nextTask;
-                SavePlayerData.nextTask = "Web";
+                SavePlayerData.nextTask = taskArray[SavePlayerData.taskNumber];
                 SavePlayerData.menuOpen = false;
                 SavePlayerData.hasWatchedIntro = true;
+                SceneManager.LoadScene("IntroVideo");
             }
-            else if (menuOpen) {
+            else {
+                SavePlayerData.nextTask = taskArray[SavePlayerData.taskNumber];
+                Debug.Log(SavePlayerData.nextTask);
+                Debug.Log(SavePlayerData.nextTask);
+                SavePlayerData.lastTask = SavePlayerData.currentTask;
+                SavePlayerData.currentTask = SavePlayerData.nextTask;
+                SavePlayerData.menuOpen = false;
+                SavePlayerData.taskNumber++;
+                SceneManager.LoadScene(SavePlayerData.currentTask + "Scene");
+            }
+            /*else if (menuOpen) {
                 if (SavePlayerData.nextTask == "Web") {
                     SceneManager.LoadScene("WebScene");
                     SavePlayerData.lastTask = SavePlayerData.currentTask;
@@ -98,11 +115,11 @@ namespace SebastiansNamespace
                     SavePlayerData.nextTask = "Getting Ready";
                     SavePlayerData.menuOpen = false;
                 }
-            }
+            }*/
         }
 
         int stringToArray(string inputString) {
-            if (inputString == "Getting Ready") {
+            if (inputString == "GettingReady") {
                 return 0;
             }
             else if (inputString == "Class") {

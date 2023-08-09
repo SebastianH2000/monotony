@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 392956730}
   - component: {fileID: 392956732}
   - component: {fileID: 392956731}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Barcode Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 454620729}
   - component: {fileID: 454620728}
   - component: {fileID: 454620727}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2291272273873742257}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 8398134479835055991}
   - component: {fileID: 8926570173037056278}
   - component: {fileID: 749137459}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Barcode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1630527127
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Sprite: {fileID: -1711360819, guid: 80bf55eb915ee4110a21be6111a2434a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 7144434439814020455}
   - component: {fileID: 7144434439814020451}
   - component: {fileID: 7144434439814020450}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Juice
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1630527127
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -2140881920, guid: 68f4eff1d4c4e4bf9973801be9ffb486, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -532,7 +532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5490901941956991904}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Show
   m_TagString: Untagged
   m_Icon: {fileID: 0}

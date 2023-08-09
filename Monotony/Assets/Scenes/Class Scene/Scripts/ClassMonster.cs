@@ -8,6 +8,7 @@ namespace SebastiansNamespace {
         private bool isMonster = true;
         private float monsterTimer = 0;
         private float monsterTarget = 0;
+        public GameObject toggleObject;
 
         public bool autoRun = true;
         // Start is called before the first frame update
@@ -20,16 +21,16 @@ namespace SebastiansNamespace {
         // Update is called once per frame
         void Update()
         {
-            if (autoRun) {
+            if (autoRun && GameObject.Find("IntroCard") && !GameObject.Find("IntroCard").GetComponent<IntroCard>().isShown) {
                 if (monsterTimer > monsterTarget) {
                     monsterTimer = 0;
                     isMonster = !isMonster;
                     if (isMonster) {
-                        monsterTarget = Random.Range(2f,5f);
+                        monsterTarget = Random.Range(5f,8f);
                         show();
                     }
                     else {
-                        monsterTarget = Random.Range(5f,15f);
+                        monsterTarget = Random.Range(12f,20f);
                         hide();
                     }
                 }
@@ -42,11 +43,20 @@ namespace SebastiansNamespace {
         public void show() {
             this.GetComponent<Alpha>().setAlpha(1f);
             this.transform.Find("Monster Back").gameObject.GetComponent<Collider2D>().enabled = true;
+            Debug.Log(toggleObject);
+            if (toggleObject != null) {
+                toggleObject.GetComponent<Alpha>().setAlpha(0f);
+                toggleObject.GetComponent<Collider2D>().enabled = false;
+            }
         }
 
         public void hide() {
             this.GetComponent<Alpha>().setAlpha(0f);
             this.transform.Find("Monster Back").gameObject.GetComponent<Collider2D>().enabled = false;
+            if (toggleObject != null) {
+                toggleObject.GetComponent<Alpha>().setAlpha(1f);
+                toggleObject.GetComponent<Collider2D>().enabled = true;
+            }
         }
     }
 }
