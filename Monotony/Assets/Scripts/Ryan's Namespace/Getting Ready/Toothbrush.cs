@@ -10,13 +10,13 @@ namespace RyansNamespace {
         private bool hasToothpaste = false;
         private SpriteRenderer SR;
 
-        public override void Awake()
+        protected override void Awake()
         {
             base.Awake();
             SR = GetComponent<SpriteRenderer>();
         }
 
-        public override void OnMouseDown()
+        protected override void OnMouseDown()
         {
             if (hasToothpaste)
                 base.OnMouseDown();

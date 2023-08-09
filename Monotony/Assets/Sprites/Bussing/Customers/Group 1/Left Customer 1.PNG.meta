@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 05bd21a9d3b944ef3a36aa25c820e0ef
+guid: bb9a6a969535a48deb4974ba23f47a85
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,22 +117,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Notepad_0
+      name: Left Customer 1_0
       rect:
         serializedVersion: 2
-        x: 89
+        x: 507
         y: 0
-        width: 479
-        height: 436
+        width: 571
+        height: 768
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a78f3a980c42f495ca49df04314988f0
-      internalID: -809922371
+      spriteID: 967ee7b8a3da64e83a602b4d108855be
+      internalID: -930391039
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Notepad_0: -809922371
+      Left Customer 1_0: -930391039
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -19,7 +19,7 @@ namespace RyansNamespace
         private bool isBarcodeShown = false;
 
         // Start is called before the first frame update
-        public override void Start()
+        protected override void Start()
         {
             base.Start();
             barcode = GetComponentInChildren<Barcode>();
@@ -29,7 +29,7 @@ namespace RyansNamespace
 
         public State GetState() => currentState;
 
-        public override void OnMouseDown()
+        protected override void OnMouseDown()
         {
             switch (currentState)
             {
@@ -53,7 +53,7 @@ namespace RyansNamespace
             }
         }
 
-        public override void FixedUpdate() {
+        protected override void FixedUpdate() {
             base.FixedUpdate();
 
             if (currentState == State.bagging) {

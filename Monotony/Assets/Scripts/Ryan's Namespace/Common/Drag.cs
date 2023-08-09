@@ -24,7 +24,7 @@ namespace RyansNamespace {
         protected float yMin;
         protected float yMax;
 
-        public virtual void Awake() {
+        protected virtual void Awake() {
             RB = GetComponent<Rigidbody2D>();
             boxCollider = GetComponent<BoxCollider2D>();
 
@@ -32,7 +32,7 @@ namespace RyansNamespace {
         }
 
         // Start is called before the first frame update
-        public virtual void Start()
+        protected virtual void Start()
         {
             RB.bodyType = RigidbodyType2D.Kinematic;
 
@@ -45,13 +45,13 @@ namespace RyansNamespace {
         }
 
         // Update is called once per frame
-        public virtual void Update()
+        protected virtual void Update()
         {
             if (isDragging)
                 mousePos = Input.mousePosition;
         }
 
-        public virtual void FixedUpdate() {
+        protected virtual void FixedUpdate() {
             if (isDragging) {
                 mousePos.z = -offset;
                 Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
@@ -68,12 +68,12 @@ namespace RyansNamespace {
             }
         }
 
-        public virtual void OnMouseDown() {
+        protected virtual void OnMouseDown() {
             isDragging = true;
             if (simulateGravity)
                 velocity = 0f;
         }
 
-        public virtual void OnMouseUp() => isDragging = false;
+        protected virtual void OnMouseUp() => isDragging = false;
     }
 }

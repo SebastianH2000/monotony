@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 05bd21a9d3b944ef3a36aa25c820e0ef
+guid: 0c57fef3fe61f46dfbc4d27cf4da9bce
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,22 +117,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Notepad_0
+      name: Burger Delivered_0
       rect:
         serializedVersion: 2
-        x: 89
-        y: 0
-        width: 479
-        height: 436
+        x: 182
+        y: 82
+        width: 249
+        height: 157
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a78f3a980c42f495ca49df04314988f0
-      internalID: -809922371
+      spriteID: 6e25bea7f3bfb4fb9bd66e238ac75434
+      internalID: -1222845508
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Notepad_0: -809922371
+      Burger Delivered_0: -1222845508
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

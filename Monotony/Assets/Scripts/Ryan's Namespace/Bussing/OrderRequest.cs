@@ -20,4 +20,8 @@ public class OrderRequest : MonoBehaviour
     public void SetFood(Food food) {
         SR.sprite = foodSpriteDict[food.ToString()];
     }
+    
+    public void GoAway() {
+        transform.parent.gameObject.SetActive(false);
+    }
 }

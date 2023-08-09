@@ -9,7 +9,7 @@ namespace RyansNamespace {
         [SerializeField] private LayerMask selectedLayer;
         private float timer;
 
-        public override void FixedUpdate()
+        protected override void FixedUpdate()
         {
             base.FixedUpdate();
 

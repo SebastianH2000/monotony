@@ -28,7 +28,7 @@ namespace RyansNamespace {
         private int timesBrushed = 0;
 
         // Start is called before the first frame update
-        public override void Start()
+        protected override void Start()
         {
             base.Start();
 
@@ -38,7 +38,7 @@ namespace RyansNamespace {
             yMax = type == Type.Hairbrush ? max : RB.position.y;
         }
 
-        public override void FixedUpdate()
+        protected override void FixedUpdate()
         {
             base.FixedUpdate();
 

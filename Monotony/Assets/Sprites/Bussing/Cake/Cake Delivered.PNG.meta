@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 05bd21a9d3b944ef3a36aa25c820e0ef
+guid: a3e7e7c6ec04947538f4e850b867cbfb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,22 +117,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Notepad_0
+      name: Cake Delivered_0
       rect:
         serializedVersion: 2
-        x: 89
-        y: 0
-        width: 479
-        height: 436
+        x: 181
+        y: 82
+        width: 249
+        height: 137
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a78f3a980c42f495ca49df04314988f0
-      internalID: -809922371
+      spriteID: e3c6f7d6c8ec44d29b54f8f77b110c33
+      internalID: 593517672
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Notepad_0: -809922371
+      Cake Delivered_0: 593517672
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
