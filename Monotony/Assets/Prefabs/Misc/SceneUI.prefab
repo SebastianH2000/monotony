@@ -158,7 +158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887738513864935858}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2354126, y: 0.1126709, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 1455145066070332752}
   - component: {fileID: 4972877920273387921}
   - component: {fileID: 7231282253209900907}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Day Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 3344738386447556547}
   - component: {fileID: 1421948145553945292}
   - component: {fileID: 106314385555086453}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +445,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6860978690120912061}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -6}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -456,7 +456,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 8.9, y: 5}
+  m_AnchoredPosition: {x: 8.9, y: -3.3}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3344738386447556547
@@ -502,7 +502,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &106314385555086453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!1 &7036445626193393643
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,8 +545,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7036445626193393643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 17.8, y: 17.8, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -6}
+  m_LocalScale: {x: 17.8, y: -17.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7660289151304284560}
@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 501563978524506923}
   - component: {fileID: 8734111531203871764}
   - component: {fileID: 2818901263143113960}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Time Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -821,7 +821,7 @@ PrefabInstance:
     - target: {fileID: 7747128079441635269, guid: 6e02937510f5146ebb2aadde94d0036a, type: 3}
       propertyPath: visionLocation
       value: 
-      objectReference: {fileID: 887738513864935858}
+      objectReference: {fileID: 4175172055063776701}
     - target: {fileID: 7747128079441635270, guid: 6e02937510f5146ebb2aadde94d0036a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -884,6 +884,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7660289151304284560}
     m_Modifications:
+    - target: {fileID: 4165634854673003343, guid: 0e8f966cbae311149bc2bbfbf47e818d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5403131406398880353, guid: 0e8f966cbae311149bc2bbfbf47e818d, type: 3}
       propertyPath: m_Name
       value: Sanity Bar (No Canvas)
@@ -966,7 +970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7660289151304284560, guid: 0e8f966cbae311149bc2bbfbf47e818d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4
+      value: -4.2
       objectReference: {fileID: 0}
     - target: {fileID: 7660289151304284560, guid: 0e8f966cbae311149bc2bbfbf47e818d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
