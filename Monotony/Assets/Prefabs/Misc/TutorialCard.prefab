@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6287362548273350240}
   - component: {fileID: 6287362548273350242}
   - component: {fileID: 6287362548273350241}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TutorialCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.0572147, y: 4.0157595}
+  m_Offset: {x: 3, y: 4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -132,7 +132,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9655695, y: 0.92910576}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &6287362548273350241
 MonoBehaviour:
