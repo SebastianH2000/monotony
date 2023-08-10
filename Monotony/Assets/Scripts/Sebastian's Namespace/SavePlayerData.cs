@@ -9,7 +9,7 @@ namespace SebastiansNamespace {
         public static float monsterDistance = 0;
         public static int day = 1;
         public static float time;
-        public static int taskNumber;
+        public static int taskNumber = 0;
 
         public static string lastTask = "Menu";
         public static string currentTask = "Menu";

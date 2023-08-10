@@ -95,7 +95,12 @@ namespace SebastiansNamespace {
                         monsterTarget = Random.Range(10f,20f);
                         teacherStandingMonster.GetComponent<ClassMonster>().hide();
                         teacherQuestionMonster.GetComponent<ClassMonster>().hide();
-                        teacherStanding.GetComponent<SpriteRenderer>().enabled = true;
+                        if (handClicked) {
+                            teacherStanding.GetComponent<SpriteRenderer>().enabled = true;
+                        }
+                        else {
+                            teacherAsking.GetComponent<SpriteRenderer>().enabled = true;
+                        }
                     }
                 }
                 else {
@@ -179,6 +184,7 @@ namespace SebastiansNamespace {
                         }
                     } else if (key == '\b' && input.Length >= 1)
                     {
+                        keyboardHitAudio[Random.Range(0,(keyboardHitAudio.Length))].Play();
                         input = input.Remove(input.Length - 1);
                     } else {
                         return;

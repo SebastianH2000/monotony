@@ -4,9 +4,9 @@ namespace RyansNamespace {
     public class BaggingArea : MonoBehaviour
     {
         private void OnTriggerEnter2D(Collider2D other) {
-            Debug.Log("called from baggingArea");
             if (other.CompareTag("Item")) {
                 Item item = other.GetComponent<Item>();
+                Debug.Log(item.name + item.GetState().ToString());
                 if (item.GetState() == Item.State.scanned)
                     item.SetState(Item.State.bagging);
             }

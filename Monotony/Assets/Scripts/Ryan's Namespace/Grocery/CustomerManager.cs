@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using SebastiansNamespace;
 
 namespace RyansNamespace {
     public class CustomerManager : MonoBehaviour
@@ -28,8 +29,9 @@ namespace RyansNamespace {
 
         public void SpawnCustomer()
         {
-            if (customers.Count <= 0) {
+            if (customers.Count <= 1) {
                 Debug.Log("No more customers to spawn");
+                GameObject.Find("FadeOut").GetComponent<FadeOut>().isFading = true;
             } else {
                 int index = Random.Range(0, customers.Count);
                 GameObject spawnedCustomer = (GameObject)Instantiate(customers[index], spawnPoint.position, Quaternion.identity);

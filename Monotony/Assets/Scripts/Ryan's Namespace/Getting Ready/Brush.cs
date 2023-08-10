@@ -1,4 +1,5 @@
 using UnityEngine;
+using SebastiansNamespace;
 
 namespace RyansNamespace {
     public class Brush : Drag
@@ -97,7 +98,7 @@ namespace RyansNamespace {
         }
 
         private void CheckBrushingCompletion() {
-            if (distanceDragged > threshold)
+            if (distanceDragged > threshold && !GameObject.Find("Mirror Monster").GetComponent<GettingReadyMonster>().isMonster)
             {
                 timesBrushed++;
 

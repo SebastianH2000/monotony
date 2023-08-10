@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 namespace RyansNamespace
 {    public class Item : Drag
@@ -46,6 +46,7 @@ namespace RyansNamespace
                     }
                     AppManager.instance.sfxManager.PlaySFX("mouse_click", 1f);
                     break;
+                case State.scanned:
                 case State.scanning:
                     base.OnMouseDown();
                     AppManager.instance.sfxManager.PlaySFX("item_pick_up", 1f);
@@ -57,13 +58,13 @@ namespace RyansNamespace
             base.FixedUpdate();
 
             if (currentState == State.bagging) {
-                Debug.Log("me");
                 RB.MovePosition(RB.position + Vector2.left * Time.fixedDeltaTime * 3f);
             }
         }
 
         public void SetState(State state) {
             switch (state) {
+                case State.scanned:
                 case State.scanning:
                     if (isBarcodeShown) {
                         barcode.Hide();
@@ -73,6 +74,7 @@ namespace RyansNamespace
                     break;
                 case State.bagging:
                     base.OnMouseUp();
+                    Debug.Log(gameObject.name + "bagging now");
                     break;
                 case State.bagged:
                     customer.SpawnItem();
@@ -81,7 +83,6 @@ namespace RyansNamespace
                     break;
             }
 
-            Debug.Log("we got here");
             currentState = state;
         }
     }

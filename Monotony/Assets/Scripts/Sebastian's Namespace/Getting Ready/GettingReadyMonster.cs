@@ -5,7 +5,7 @@ using UnityEngine;
 namespace SebastiansNamespace {
     public class GettingReadyMonster : MonoBehaviour
     {
-        private bool isMonster = true;
+        public bool isMonster = true;
         private float monsterTimer = 0;
         private float monsterTarget = 0;
         public GameObject toggleObject;

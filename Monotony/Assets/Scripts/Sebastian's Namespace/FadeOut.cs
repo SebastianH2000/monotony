@@ -20,8 +20,12 @@ public class FadeOut : MonoBehaviour
     void Update()
     {
         if (isFading && fadeTimer < 1f) {
-            fadeTimer += Time.deltaTime;
-            Debug.Log(fadeTimer);
+            if (SceneManager.GetActiveScene().name != "MainMenuScene") {
+                fadeTimer += Time.deltaTime/2.5f;
+            }
+            else {
+                fadeTimer += Time.deltaTime;
+            }
             blackSquare.GetComponent<SpriteRenderer>().color = new Color(0,0,0,Mathf.Lerp(0,1,fadeTimer));
         }
         else if (isFading && fadeTimer >= 1f && changeScene) {

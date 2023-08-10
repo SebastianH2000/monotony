@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4612647298529477796}
   - component: {fileID: 4612647298529477795}
   - component: {fileID: -1265888258343893355}
+  - component: {fileID: 9048018127265734793}
   m_Layer: 0
   m_Name: Girlboss2
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4612647298529477794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -516968273
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 549941200, guid: c2111765c77e4475d92c66232812496d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -102,3 +103,15 @@ MonoBehaviour:
   - {fileID: 7144434439814020441, guid: 8709fc2994edc46c0948d3052e2213ae, type: 3}
   - {fileID: 7144434439814020441, guid: 8709fc2994edc46c0948d3052e2213ae, type: 3}
   speed: 3
+--- !u!114 &9048018127265734793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4612647298529477794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc19898972da24b6fae165c3237b14d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

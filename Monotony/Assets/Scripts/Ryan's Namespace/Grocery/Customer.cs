@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using SebastiansNamespace;
 
 namespace RyansNamespace {
     public class Customer : MonoBehaviour
@@ -16,20 +17,26 @@ namespace RyansNamespace {
         // Update is called once per frame
         void Update()
         {
-            if (arrived)
-                return;
+            if (!GameObject.Find("Customer Monster").GetComponent<GettingReadyMonster>().isMonster) {
+                this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                if (arrived)
+                    return;
 
-            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
-            if (Vector3.Distance(transform.position, target) < 0.1f) {
-                arrived = true;
+                if (Vector3.Distance(transform.position, target) < 0.1f) {
+                    arrived = true;
 
-                if (target == CustomerManager.instance.GetCheckoutPoint()) {
-                    SpawnItem();
-                } else if (target == CustomerManager.instance.GetDeathPoint()) {
-                    CustomerManager.instance.SpawnCustomer();
-                    Destroy(gameObject);
+                    if (target == CustomerManager.instance.GetCheckoutPoint()) {
+                        SpawnItem();
+                    } else if (target == CustomerManager.instance.GetDeathPoint()) {
+                        CustomerManager.instance.SpawnCustomer();
+                        Destroy(gameObject);
+                    }
                 }
+            }
+            else {
+                this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             }
         }
 

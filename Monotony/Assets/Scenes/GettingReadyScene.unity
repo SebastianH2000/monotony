@@ -319,6 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f3307f8320ef7c46be07c392669c722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMonster: 1
   toggleObject: {fileID: 0}
   autoRun: 1
 --- !u!1 &240064440
@@ -1881,6 +1882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f3307f8320ef7c46be07c392669c722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMonster: 1
   toggleObject: {fileID: 0}
   autoRun: 1
 --- !u!1 &1322408386
@@ -2573,7 +2575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705392133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.2}
+  m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2661,7 +2663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f3307f8320ef7c46be07c392669c722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggleObject: {fileID: 0}
+  isMonster: 1
+  toggleObject: {fileID: 768501764}
   autoRun: 1
 --- !u!1001 &1877073480
 PrefabInstance:
