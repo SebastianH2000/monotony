@@ -19,7 +19,7 @@ public class FadeIn : MonoBehaviour
     void Update()
     {
         if (isFading && fadeTimer < 1f) {
-            fadeTimer += Time.deltaTime;
+            fadeTimer += Time.unscaledDeltaTime;
             blackSquare.GetComponent<SpriteRenderer>().color = new Color(0,0,0,Mathf.Lerp(1,0,fadeTimer));
         }
         else if (isFading && fadeTimer >= 1f) {

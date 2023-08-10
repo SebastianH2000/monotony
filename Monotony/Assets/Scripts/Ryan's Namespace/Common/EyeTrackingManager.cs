@@ -34,7 +34,7 @@ namespace RyansNamespace {
 
             //GazePoint gazePoint = TobiiAPI.GetGazePoint();
             //if (gazePoint.IsValid && GameObject.Find("IntroCard"))
-            if (true && GameObject.Find("IntroCard") && !GameObject.Find("IntroCard").GetComponent<IntroCard>().isShown)
+            if (true && GameObject.Find("IntroCard"))
             {
                 //Vector3 screenPos = gazePoint.Screen;
                 //screenPos.z = -offset;

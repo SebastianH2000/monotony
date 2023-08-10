@@ -65,6 +65,9 @@ TagManager:
   - name: Eyes
     uniqueID: 2938027541
     locked: 0
+  - name: Tutorial
+    uniqueID: 945474499
+    locked: 0
   - name: Player
     uniqueID: 1177663545
     locked: 0

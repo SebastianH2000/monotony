@@ -21,7 +21,7 @@ namespace SebastiansNamespace {
         // Update is called once per frame
         void Update()
         {
-            if (autoRun && GameObject.Find("IntroCard") && !GameObject.Find("IntroCard").GetComponent<IntroCard>().isShown) {
+            if (autoRun && GameObject.Find("IntroCard")) {
                 if (monsterTimer > monsterTarget) {
                     monsterTimer = 0;
                     isMonster = !isMonster;

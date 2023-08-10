@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 676e44562143cb641a181a8cc0c6a99d
+guid: 50b580f7115f94e8da4ea2b3ccd6ac9d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 227
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -102,18 +102,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -129,8 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
-        (~4 frames)_0
+      name: GrocerySceneTutorial_0
       rect:
         serializedVersion: 2
         x: 0
@@ -144,15 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25320b878b962f1438cfc070b4064b0c
-      internalID: 783035934
+      spriteID: 9e456fbacb54646038d81dbaa447d8d4
+      internalID: -126311532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
-        (~4 frames)_1
+      name: GrocerySceneTutorial_1
       rect:
         serializedVersion: 2
         x: 708
@@ -166,15 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5732dc3761b0ad940ad6dbcbeb913ca2
-      internalID: 126803297
+      spriteID: c93d8bbaba111423a8380b105f819ef7
+      internalID: 1719986216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
-        (~4 frames)_2
+      name: GrocerySceneTutorial_2
       rect:
         serializedVersion: 2
         x: 1416
@@ -188,15 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58585651691874c42adc2199d6a9894f
-      internalID: -67848232
+      spriteID: 30a9f4d25f19f44f887ed2e8b9c37f85
+      internalID: 1028712609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
-        (~4 frames)_3
+      name: GrocerySceneTutorial_3
       rect:
         serializedVersion: 2
         x: 2124
@@ -210,15 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3de0589030792ec4e9839371c7bc4698
-      internalID: -29978482
+      spriteID: 23f4737a5fa624472ba97fdd11ec7752
+      internalID: -1293029668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
-        (~4 frames)_4
+      name: GrocerySceneTutorial_4
       rect:
         serializedVersion: 2
         x: 2832
@@ -232,15 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48e81b85ae8b37a4cafc5111681a34d1
-      internalID: -146300444
+      spriteID: 8672832c0e404491ba09d8fac311f00c
+      internalID: 1544545147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
-        (~4 frames)_5
+      name: GrocerySceneTutorial_5
       rect:
         serializedVersion: 2
         x: 3540
@@ -254,15 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 004209f99aed6d14f9a6d1948df74171
-      internalID: -598003750
+      spriteID: 7850bdb6e7b8e4b2fb86701c7c7a2b94
+      internalID: 2106020225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
-        (~4 frames)_6
+      name: GrocerySceneTutorial_6
       rect:
         serializedVersion: 2
         x: 4248
@@ -276,15 +257,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f46f655058900b4faabb31d4ce87cad
-      internalID: 739859403
+      spriteID: c423ac242a4a34a55a5ccf4b3545e357
+      internalID: 1425079604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
-        (~4 frames)_7
+      name: GrocerySceneTutorial_7
       rect:
         serializedVersion: 2
         x: 4956
@@ -298,15 +278,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 062391a964746d6408ad05191080d0e8
-      internalID: 2047841559
+      spriteID: edd3c80fd860540159e37885c3e4a970
+      internalID: -1636432722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer
-        (~4 frames)_8
+      name: GrocerySceneTutorial_8
       rect:
         serializedVersion: 2
         x: 5664
@@ -320,8 +299,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f83876f5fb89bbd44ba5d47c2ac7b76b
-      internalID: -1116831174
+      spriteID: 9343c2ad57d3a494caa04d9bcc24880b
+      internalID: -423779968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrocerySceneTutorial_9
+      rect:
+        serializedVersion: 2
+        x: 6372
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc006abaa12e9484eabc61050cbf8ac4
+      internalID: 1047985075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrocerySceneTutorial_10
+      rect:
+        serializedVersion: 2
+        x: 7080
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb3487e3dbf44f8da5245a14d3b75d4
+      internalID: 1869885762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrocerySceneTutorial_11
+      rect:
+        serializedVersion: 2
+        x: 7788
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbc6c8f9fc954b30b2df9d3682e6c83
+      internalID: -1278095563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrocerySceneTutorial_12
+      rect:
+        serializedVersion: 2
+        x: 8496
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbd5571e57f9419bad8297c559f6355
+      internalID: -1064966858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrocerySceneTutorial_13
+      rect:
+        serializedVersion: 2
+        x: 9204
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac73339364344feaa9ba5e11408c335
+      internalID: -1124938456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrocerySceneTutorial_14
+      rect:
+        serializedVersion: 2
+        x: 9912
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce22f66ea192947deadcfbdda85f44b6
+      internalID: -1635672438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrocerySceneTutorial_15
+      rect:
+        serializedVersion: 2
+        x: 10620
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd944f6abaa649d882547693edd29b9
+      internalID: 1869925394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrocerySceneTutorial_16
+      rect:
+        serializedVersion: 2
+        x: 11328
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd63bff906d0450a991e319d5c5b1cc
+      internalID: -1950659437
       vertices: []
       indices: 
       edges: []
@@ -337,15 +484,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_0: 783035934
-      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_1: 126803297
-      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_2: -67848232
-      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_3: -29978482
-      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_4: -146300444
-      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_5: -598003750
-      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_6: 739859403
-      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_7: 2047841559
-      classes tutorial spritesheet -- 708x895, 5fps, hold last frame for longer (~4 frames)_8: -1116831174
+      GrocerySceneTutorial_0: -126311532
+      GrocerySceneTutorial_1: 1719986216
+      GrocerySceneTutorial_10: 1869885762
+      GrocerySceneTutorial_11: -1278095563
+      GrocerySceneTutorial_12: -1064966858
+      GrocerySceneTutorial_13: -1124938456
+      GrocerySceneTutorial_14: -1635672438
+      GrocerySceneTutorial_15: 1869925394
+      GrocerySceneTutorial_16: -1950659437
+      GrocerySceneTutorial_2: 1028712609
+      GrocerySceneTutorial_3: -1293029668
+      GrocerySceneTutorial_4: 1544545147
+      GrocerySceneTutorial_5: 2106020225
+      GrocerySceneTutorial_6: 1425079604
+      GrocerySceneTutorial_7: -1636432722
+      GrocerySceneTutorial_8: -423779968
+      GrocerySceneTutorial_9: 1047985075
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

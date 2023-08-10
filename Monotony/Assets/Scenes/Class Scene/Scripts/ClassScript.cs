@@ -76,116 +76,114 @@ namespace SebastiansNamespace {
         // Update is called once per frame
         void Update()
         {
-            if (GameObject.Find("IntroCard") && !GameObject.Find("IntroCard").GetComponent<IntroCard>().isShown) {
-                if (monsterTimer > monsterTarget) {
-                    monsterTimer = 0;
-                    isMonster = !isMonster;
-                    if (isMonster) {
-                        monsterTarget = Random.Range(3f,5f);
-                        if (waitingForTeacher) {
-                            teacherQuestionMonster.GetComponent<ClassMonster>().show();
-                        }
-                        else {
-                            teacherStandingMonster.GetComponent<ClassMonster>().show();
-                        }
-                        teacherStanding.GetComponent<SpriteRenderer>().enabled = false;
-                        teacherAsking.GetComponent<SpriteRenderer>().enabled = false;
+            if (monsterTimer > monsterTarget) {
+                monsterTimer = 0;
+                isMonster = !isMonster;
+                if (isMonster) {
+                    monsterTarget = Random.Range(3f,5f);
+                    if (waitingForTeacher) {
+                        teacherQuestionMonster.GetComponent<ClassMonster>().show();
                     }
                     else {
-                        monsterTarget = Random.Range(10f,20f);
-                        teacherStandingMonster.GetComponent<ClassMonster>().hide();
-                        teacherQuestionMonster.GetComponent<ClassMonster>().hide();
-                        teacherStanding.GetComponent<SpriteRenderer>().enabled = true;
+                        teacherStandingMonster.GetComponent<ClassMonster>().show();
                     }
+                    teacherStanding.GetComponent<SpriteRenderer>().enabled = false;
+                    teacherAsking.GetComponent<SpriteRenderer>().enabled = false;
                 }
                 else {
-                    monsterTimer += Time.deltaTime;
+                    monsterTarget = Random.Range(10f,20f);
+                    teacherStandingMonster.GetComponent<ClassMonster>().hide();
+                    teacherQuestionMonster.GetComponent<ClassMonster>().hide();
+                    teacherStanding.GetComponent<SpriteRenderer>().enabled = true;
                 }
+            }
+            else {
+                monsterTimer += Time.deltaTime;
+            }
 
-                if (waitingForTeacher) {
-                    teacherQuestionTimer += Time.deltaTime;
-                    if (teacherQuestionTimer > 0.5f && !isMonster) {
-                        teacherStanding.GetComponent<SpriteRenderer>().enabled = false;
-                        teacherAsking.GetComponent<SpriteRenderer>().enabled = true;
-                        teacherQuestionTimer = -100;
-                        questionAudio[Random.Range(0,(questionAudio.Length))].Play();
+            if (waitingForTeacher) {
+                teacherQuestionTimer += Time.deltaTime;
+                if (teacherQuestionTimer > 0.5f && !isMonster) {
+                    teacherStanding.GetComponent<SpriteRenderer>().enabled = false;
+                    teacherAsking.GetComponent<SpriteRenderer>().enabled = true;
+                    teacherQuestionTimer = -100;
+                    questionAudio[Random.Range(0,(questionAudio.Length))].Play();
 
-                        handClicked = false;
-                    }
+                    handClicked = false;
                 }
+            }
 
-                //slides
-                if (slideStartTimer > 1.5f) {
-                    slideStartTimer = -1;
-                    currentSlide = Random.Range(0,slideShownList.Count);
-                    slideShownList[currentSlide].GetComponent<SpriteRenderer>().enabled = true;
-                    if (slideAnswers[currentSlide].Length == 2) {
-                        check3.GetComponent<SpriteRenderer>().enabled = false;
-                    }
-                    else {
-                        check3.GetComponent<SpriteRenderer>().enabled = true;
-                    }
+            //slides
+            if (slideStartTimer > 1.5f) {
+                slideStartTimer = -1;
+                currentSlide = Random.Range(0,slideShownList.Count);
+                slideShownList[currentSlide].GetComponent<SpriteRenderer>().enabled = true;
+                if (slideAnswers[currentSlide].Length == 2) {
+                    check3.GetComponent<SpriteRenderer>().enabled = false;
                 }
-                else if (slideStartTimer > -1) {
-                    slideStartTimer += Time.deltaTime;
+                else {
+                    check3.GetComponent<SpriteRenderer>().enabled = true;
                 }
+            }
+            else if (slideStartTimer > -1) {
+                slideStartTimer += Time.deltaTime;
+            }
 
 
-                //input
-                //string targetString = "he";
-                string targetString = slideAnswers[currentSlide][slideAnswerPosition];
-                if (Input.inputString.Length > 0 && canSend)
+            //input
+            //string targetString = "he";
+            string targetString = slideAnswers[currentSlide][slideAnswerPosition];
+            if (Input.inputString.Length > 0 && canSend)
+            {
+                char key = Input.inputString[0];
+
+                if ((char.IsLetter(key) || (key == " "[0] && input.Length > 0)) && input.Length < targetString.Length)
                 {
-                    char key = Input.inputString[0];
+                    input += key;
+                    keyboardHitAudio[Random.Range(0,(keyboardHitAudio.Length))].Play();
 
-                    if ((char.IsLetter(key) || (key == " "[0] && input.Length > 0)) && input.Length < targetString.Length)
+                    if (input.Length == targetString.Length)
                     {
-                        input += key;
-                        keyboardHitAudio[Random.Range(0,(keyboardHitAudio.Length))].Play();
-
-                        if (input.Length == targetString.Length)
-                        {
-                            if (input.ToLower() == targetString.ToLower()) {
-                                correctAudio.Play();
-                                input = "";
-                                computerText.GetComponent<TextMeshProUGUI>().text = input;
-                                if (slideAnswerPosition < (slideAnswers[currentSlide].Length-1)) {
-                                    //checkboxes
-                                    check1.GetComponent<Checkbox>().On();
-                                    if (slideAnswerPosition == 1) {
-                                        check2.GetComponent<Checkbox>().On();
-                                    }
-                                    slideAnswerPosition++;
+                        if (input.ToLower() == targetString.ToLower()) {
+                            correctAudio.Play();
+                            input = "";
+                            computerText.GetComponent<TextMeshProUGUI>().text = input;
+                            if (slideAnswerPosition < (slideAnswers[currentSlide].Length-1)) {
+                                //checkboxes
+                                check1.GetComponent<Checkbox>().On();
+                                if (slideAnswerPosition == 1) {
+                                    check2.GetComponent<Checkbox>().On();
                                 }
-                                else {
-                                    if (slideAnswerPosition == 1) {
-                                        check2.GetComponent<Checkbox>().On();
-                                    }
-                                    if (check3.GetComponent<SpriteRenderer>().enabled) {
-                                        check3.GetComponent<Checkbox>().On();
-                                    }
-                                    if (slideShownList.Count > 3) {
-                                        waitingForTeacher = true;
-                                    }
-                                    else {
-                                        GameObject.Find("FadeOut").GetComponent<FadeOut>().isFading = true;
-                                    }
-                                }
+                                slideAnswerPosition++;
                             }
                             else {
-                                computerText.GetComponent<TextMeshProUGUI>().text = input;
-                                return;
+                                if (slideAnswerPosition == 1) {
+                                    check2.GetComponent<Checkbox>().On();
+                                }
+                                if (check3.GetComponent<SpriteRenderer>().enabled) {
+                                    check3.GetComponent<Checkbox>().On();
+                                }
+                                if (slideShownList.Count > 3) {
+                                    waitingForTeacher = true;
+                                }
+                                else {
+                                    GameObject.Find("FadeOut").GetComponent<FadeOut>().isFading = true;
+                                }
                             }
                         }
-                    } else if (key == '\b' && input.Length >= 1)
-                    {
-                        input = input.Remove(input.Length - 1);
-                    } else {
-                        return;
+                        else {
+                            computerText.GetComponent<TextMeshProUGUI>().text = input;
+                            return;
+                        }
                     }
-                    computerText.GetComponent<TextMeshProUGUI>().text = input;
-                }            
-            }
+                } else if (key == '\b' && input.Length >= 1)
+                {
+                    input = input.Remove(input.Length - 1);
+                } else {
+                    return;
+                }
+                computerText.GetComponent<TextMeshProUGUI>().text = input;
+            }            
         }
 
         public void clickHand() {
