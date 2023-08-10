@@ -804,7 +804,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: cc74e2f53d29bf84aa499b3a43db05bd, type: 2}
   lowPassNormalValue: 15000
   lowPassFilteredValue: 1383
-  transitionDuration: 1
+  transitionDuration: 0.5
   maxNoiseVol: 6.3
   isLookingAtMonster: 1
 --- !u!1001 &5405605895108404539

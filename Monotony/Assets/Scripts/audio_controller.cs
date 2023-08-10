@@ -68,15 +68,17 @@ public class audio_controller : MonoBehaviour
         isLookingAtMonster = SavePlayerData.lookingAtMonster;
         float increment = 1 / transitionDuration;
         int isLookingMult = 0;
-        if (isLookingAtMonster) {
+        if (SavePlayerData.lookingAtMonster) {
             isLookingMult = 1;
         }
         else {
             isLookingMult = -1;
         }
-        lerpValue += increment * Time.deltaTime * isLookingMult;
+        Debug.Log(SavePlayerData.monsterDistance);
+        lerpValue += increment * Time.deltaTime * isLookingMult * Mathf.Clamp(SavePlayerData.monsterDistance,1,4);
         lerpValue = Mathf.Clamp(lerpValue, 0, 1);
         audioMixer.SetFloat("noiseVol", Mathf.Lerp(-80, maxNoiseVol, lerpValue));
+        //Debug.Log(lerpValue);
         audioMixer.SetFloat("lowpass", Mathf.Lerp(lowPassFilteredValue, lowPassNormalValue, lerpValue));
     }
 

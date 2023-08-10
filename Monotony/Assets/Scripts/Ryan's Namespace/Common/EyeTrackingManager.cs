@@ -65,7 +65,7 @@ namespace RyansNamespace {
             }
 
             if (inverseDistance > 0) {
-                SavePlayerData.sanity = Mathf.Clamp(SavePlayerData.sanity - (Time.deltaTime / 30f * (inverseDistance)), 0f, 1f);
+                SavePlayerData.sanity = Mathf.Clamp(SavePlayerData.sanity - (Time.deltaTime / 45f * (inverseDistance)), 0f, 1f);
                 if (SavePlayerData.sanity <= 0)
                     GameObject.Find("FadeOut").GetComponent<FadeOut>().isFading = true;
                 SavePlayerData.lookingAtMonster = true;
