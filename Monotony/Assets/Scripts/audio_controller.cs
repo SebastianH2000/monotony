@@ -11,10 +11,10 @@ public class audio_controller : MonoBehaviour
     AudioMixer audioMixer;
     [SerializeField]
     [Range(0, 22000)]
-    int lowPassNormalValue = 15000;
+    int lowPassNormalValue;
     [Range(0, 22000)]
     [SerializeField]
-    int lowPassFilteredValue = 500;
+    int lowPassFilteredValue;
     [SerializeField]
     float transitionDuration;
     [SerializeField]
@@ -31,6 +31,7 @@ public class audio_controller : MonoBehaviour
     const string noiseVol = "noiseVol";
     private float curNoise;
     private float curLowpass;
+    private float lerpValue;
 
     void Start()
     {
@@ -41,7 +42,7 @@ public class audio_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!wasLooking && SavePlayerData.lookingAtMonster)
+        if (!wasLooking && isLookingAtMonster)
         {
             
             audioMixer.GetFloat(lowpass, out curLowpass);
@@ -61,19 +62,45 @@ public class audio_controller : MonoBehaviour
             StartCoroutine(LerpMixerValue(curNoise, -80, noiseVol, isLookingAtMonster));
 
             wasLooking = false;
+        }*/
+
+        isLookingAtMonster = SavePlayerData.lookingAtMonster;
+        float increment = 1 / transitionDuration;
+        int isLookingMult = 0;
+        if (isLookingAtMonster) {
+            isLookingMult = 1;
         }
+        else {
+            isLookingMult = -1;
+        }
+        lerpValue += increment * Time.deltaTime * isLookingMult;
+        lerpValue = Mathf.Clamp(lerpValue, 0, 1);
+        audioMixer.SetFloat("noiseVol", Mathf.Lerp(-80, maxNoiseVol, lerpValue));
+        audioMixer.SetFloat("lowpass", Mathf.Lerp(lowPassFilteredValue, lowPassNormalValue, lerpValue));
     }
 
-    IEnumerator LerpMixerValue(float startValue, float endValue, string name, bool looking)
+    IEnumerator LerpMixerValue(float startValue, float endValue, bool looking)
     {
-        float lerpValue = 0;
         float increment = 1 / transitionDuration;
+        yield return 0;
 
-        while (lerpValue < 1 || looking != isLookingAtMonster)
+        /*while (lerpValue < 1 || looking != isLookingAtMonster)
         {
             lerpValue += increment * Time.deltaTime;
             audioMixer.SetFloat(name, Mathf.Lerp(startValue, endValue, lerpValue));
             yield return 0;
+        }*/
+        /*int isLookingMult = 0;
+        if (looking) {
+            isLookingMult = 1;
         }
+        else {
+            isLookingMult = -1;
+        }
+        lerpValue += increment * Time.deltaTime * isLookingMult;
+        lerpValue = Mathf.Clamp(lerpValue, -1, 1);
+        audioMixer.SetFloat("noiseVol", Mathf.Lerp(startValue, endValue, lerpValue));
+        audioMixer.SetFloat("lowpass", Mathf.Lerp(startValue, endValue, lerpValue));
+        yield return 0;*/
     }
 }

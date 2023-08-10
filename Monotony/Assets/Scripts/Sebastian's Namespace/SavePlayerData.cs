@@ -15,6 +15,7 @@ namespace SebastiansNamespace {
         public static string currentTask = "Menu";
         public static string nextTask = "GettingReady";
         public static bool menuOpen = true;
+        public static bool isDead = false;
 
         public static string[] taskArray = new string[4];
         public static bool[] completedArray = new bool[4];

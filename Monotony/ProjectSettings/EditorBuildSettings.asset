@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Web Scene/WebScene.unity
     guid: cb9962b4ca06f364a8cd44c604df28e6
   - enabled: 1
-    path: Assets/Scenes/1 - video.unity
+    path: Assets/Scenes/IntroVideo.unity
     guid: f259ea2790c8289439efa53611b341ad
+  - enabled: 1
+    path: Assets/Scenes/OutroVideo.unity
+    guid: d4667e6e96e1f984c91c4ef74c77be94
+  - enabled: 1
+    path: Assets/Scenes/TryAgainScene.unity
+    guid: 0c363a99e6fcf3d45bfdc93fcb6074fa
   m_configObjects: {}

@@ -21,7 +21,7 @@ namespace SebastiansNamespace {
         // Update is called once per frame
         void Update()
         {
-            if (autoRun && GameObject.Find("IntroCard")) {
+            if (autoRun) {
                 if (monsterTimer > monsterTarget) {
                     monsterTimer = 0;
                     isMonster = !isMonster;
@@ -41,6 +41,7 @@ namespace SebastiansNamespace {
         }
 
         public void show() {
+            Debug.Log("SHOW");
             this.GetComponent<Alpha>().setAlpha(1f);
             this.transform.Find("Monster Back").gameObject.GetComponent<Collider2D>().enabled = true;
             Debug.Log(toggleObject);
@@ -51,6 +52,7 @@ namespace SebastiansNamespace {
         }
 
         public void hide() {
+            Debug.Log("HIDE");
             this.GetComponent<Alpha>().setAlpha(0f);
             this.transform.Find("Monster Back").gameObject.GetComponent<Collider2D>().enabled = false;
             if (toggleObject != null) {

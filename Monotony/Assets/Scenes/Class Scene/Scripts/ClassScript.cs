@@ -85,15 +85,7 @@ namespace SebastiansNamespace {
                         teacherQuestionMonster.GetComponent<ClassMonster>().show();
                     }
                     else {
-                        monsterTarget = Random.Range(10f,20f);
-                        teacherStandingMonster.GetComponent<ClassMonster>().hide();
-                        teacherQuestionMonster.GetComponent<ClassMonster>().hide();
-                        if (handClicked) {
-                            teacherStanding.GetComponent<SpriteRenderer>().enabled = true;
-                        }
-                        else {
-                            teacherAsking.GetComponent<SpriteRenderer>().enabled = true;
-                        }
+                        teacherStandingMonster.GetComponent<ClassMonster>().show();
                     }
                     teacherStanding.GetComponent<SpriteRenderer>().enabled = false;
                     teacherAsking.GetComponent<SpriteRenderer>().enabled = false;
@@ -102,7 +94,12 @@ namespace SebastiansNamespace {
                     monsterTarget = Random.Range(10f,20f);
                     teacherStandingMonster.GetComponent<ClassMonster>().hide();
                     teacherQuestionMonster.GetComponent<ClassMonster>().hide();
-                    teacherStanding.GetComponent<SpriteRenderer>().enabled = true;
+                    if (handClicked) {
+                        teacherStanding.GetComponent<SpriteRenderer>().enabled = true;
+                    }
+                    else {
+                        teacherAsking.GetComponent<SpriteRenderer>().enabled = true;
+                    }
                 }
             }
             else {
@@ -183,21 +180,16 @@ namespace SebastiansNamespace {
                     {
                         keyboardHitAudio[Random.Range(0,(keyboardHitAudio.Length))].Play();
                         input = input.Remove(input.Length - 1);
-                    } else {
-                        return;
                     }
                 } else if (key == '\b' && input.Length >= 1)
                 {
                     input = input.Remove(input.Length - 1);
-                } else {
-                    return;
                 }
                 computerText.GetComponent<TextMeshProUGUI>().text = input;
             }            
         }
 
         public void clickHand() {
-            Debug.Log("HA");
             if (handClicked == false && !isMonster) {
                 handLeftResting.GetComponent<SpriteRenderer>().enabled = false;
                 handLeftRaising.GetComponent<SpriteRenderer>().enabled = true;
