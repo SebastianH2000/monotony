@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using SebastiansNamespace;
 
 public class audio_controller : MonoBehaviour
 {
@@ -40,7 +41,7 @@ public class audio_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!wasLooking && isLookingAtMonster)
+        if (!wasLooking && SavePlayerData.lookingAtMonster)
         {
             
             audioMixer.GetFloat(lowpass, out curLowpass);
@@ -51,7 +52,7 @@ public class audio_controller : MonoBehaviour
 
             wasLooking = true;
         }
-        if(wasLooking && !isLookingAtMonster)
+        if(wasLooking && !SavePlayerData.lookingAtMonster)
         {
             audioMixer.GetFloat(lowpass, out curLowpass);
             StartCoroutine(LerpMixerValue(curLowpass, lowPassNormalValue, lowpass, !isLookingAtMonster));

@@ -10,15 +10,19 @@ namespace RyansNamespace {
 
         public SFXManager sfxManager { get; private set; }
 
-        // Start is called before the first frame update
-        void Start()
-        {
+        private void Awake() {
             if (instance == null)
                 instance = this;
             else if (instance != this)
                 Destroy(gameObject);
 
             sfxManager = GetComponent<SFXManager>();
+        }
+
+        // Start is called before the first frame update
+        void Start()
+        {
+
         }
 
         // Update is called once per frame

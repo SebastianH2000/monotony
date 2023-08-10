@@ -35,6 +35,7 @@ namespace RyansNamespace {
                 Destroy(gameObject);
 
             SR = GetComponent<SpriteRenderer>();
+            AppManager.instance.sfxManager.PlaySFX("running_faucet_loop", 0.1f, true);
 
             // Populate the dictionary with the character sprites
             foreach (Sprite sprite in characterSprites)

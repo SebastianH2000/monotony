@@ -63,6 +63,8 @@ namespace RyansNamespace {
                     case State.MovingNegativeDirection:
                         CheckBrushingCompletion();
                         currentState = State.MovingPositiveDirection;
+                        if (type == Type.Toothbrush)
+                            AppManager.instance.sfxManager.PlaySFX("toothbrush_" + Random.Range(1, 4).ToString(), 1f);
                         break;
                     case State.MovingPositiveDirection:
                         distanceDragged += Mathf.Abs(clampedPosAxis - rbPositionAxis);
@@ -80,6 +82,14 @@ namespace RyansNamespace {
                     case State.MovingPositiveDirection:
                         CheckBrushingCompletion();
                         currentState = State.MovingNegativeDirection;
+                        switch (type) {
+                            case Type.Toothbrush:
+                                AppManager.instance.sfxManager.PlaySFX("toothbrush_" + Random.Range(1, 4).ToString(), 1f);
+                                break;
+                            case Type.Hairbrush:
+                                AppManager.instance.sfxManager.PlaySFX("hairbrush_" + Random.Range(1, 4).ToString(), 1f);
+                                break;
+                        }
                         break;
                     case State.MovingNegativeDirection:
                         distanceDragged += Mathf.Abs(clampedPosAxis - rbPositionAxis);

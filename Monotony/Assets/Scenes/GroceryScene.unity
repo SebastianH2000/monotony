@@ -1188,6 +1188,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialCard
       objectReference: {fileID: 0}
+    - target: {fileID: 6287362548273350254, guid: 32a6305048d2c443989f6fbfa34a7197, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 97045456, guid: 6604f107d7693478cb0e41a6645500ba, type: 3}
+    - target: {fileID: 6287362548273350254, guid: 32a6305048d2c443989f6fbfa34a7197, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6287362548273350255, guid: 32a6305048d2c443989f6fbfa34a7197, type: 3}
       propertyPath: m_RootOrder
       value: 12

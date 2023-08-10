@@ -8,6 +8,7 @@ namespace RyansNamespace {
         {
             if (!GameObject.Find("Mirror Monster").GetComponent<GettingReadyMonster>().isMonster) {
                 GO.GetComponent<Player>().CompleteSkincareTask();
+                AppManager.instance.sfxManager.PlaySFX("apply_skincare", 1f);
             }
         }
     }

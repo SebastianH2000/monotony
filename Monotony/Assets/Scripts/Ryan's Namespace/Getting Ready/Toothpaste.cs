@@ -7,5 +7,11 @@ namespace RyansNamespace {
         {
             GO.GetComponent<Toothbrush>().AddToothpaste();
         }
+
+        protected override void OnMouseDown()
+        {
+            base.OnMouseDown();
+            AppManager.instance.sfxManager.PlaySFX("open_toothpaste", 1f);
+        }
     }
 }

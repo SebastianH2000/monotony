@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2e73361f43ef540d6939c7f2283d6d29
+guid: f7cde775305e54a9da33c7700b9d4bb3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -115,7 +115,1078 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddc8a93066c6438ca1cb39a7766ebf2
+      internalID: -1354259192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_1
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed20af7b4ee447fba34dfa645bc80a9
+      internalID: -410606369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_2
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e6bbde7424a4dcc9064265ff85445b
+      internalID: 957720607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_3
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863ad953c19dd40c5ba7373beea1ec75
+      internalID: -2105037741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_4
+      rect:
+        serializedVersion: 2
+        x: 2832
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f6c55c4ae4f486fa1f23e99db034e6
+      internalID: 1142957239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_5
+      rect:
+        serializedVersion: 2
+        x: 3540
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2092e96226140c892a2db4b0d78b4a
+      internalID: -1173639129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_6
+      rect:
+        serializedVersion: 2
+        x: 4248
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475459ccc9baa4bcfb4e3e28b8e891fa
+      internalID: 1450187120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_7
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7652287564214d29b7ce303094ee7e2
+      internalID: 1098655404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_8
+      rect:
+        serializedVersion: 2
+        x: 5664
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4717c48e7354eb498763cdc576185b
+      internalID: -583664447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_9
+      rect:
+        serializedVersion: 2
+        x: 6372
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3fbc13717e94e80a7028fa17d6bce9
+      internalID: 895784665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_10
+      rect:
+        serializedVersion: 2
+        x: 7080
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54b921f60912473cb8dc53b98cc9b28
+      internalID: 528586181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_11
+      rect:
+        serializedVersion: 2
+        x: 7788
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37104f48cf53e4d64983d4d174d3e818
+      internalID: -580287048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_12
+      rect:
+        serializedVersion: 2
+        x: 8496
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bb4f7edb822437c8cff391aa3237b4
+      internalID: 2021694349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_13
+      rect:
+        serializedVersion: 2
+        x: 9204
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab171350da9a14b47941d564ec6631f7
+      internalID: 1044060346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_14
+      rect:
+        serializedVersion: 2
+        x: 9912
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78db9916bd70c4c55b9b4a6769a61556
+      internalID: -1753302361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_15
+      rect:
+        serializedVersion: 2
+        x: 10620
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c57c04c268a433eaab7dbc2ac6b096
+      internalID: -533143920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_16
+      rect:
+        serializedVersion: 2
+        x: 11328
+        y: 1790
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8ac3ea3ed714faa9561446e4bfb4d6
+      internalID: -204785112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbfb4fbb9f50457d9123dd8296f0b9d
+      internalID: 885996076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_18
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba2d9abf076243a68a871ca20335d24
+      internalID: 1048062033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_19
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66bf1d1b93524495bf2427918ddd951
+      internalID: -1621680019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_20
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643ae9016fd6946ac9a3cacd1553028e
+      internalID: -1399256091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_21
+      rect:
+        serializedVersion: 2
+        x: 2832
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3381e63ff1ca54d3aa4e4e9c9fc38766
+      internalID: 1770537763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_22
+      rect:
+        serializedVersion: 2
+        x: 3540
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69815e1fc96d847e29c162e015060f65
+      internalID: 676473785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_23
+      rect:
+        serializedVersion: 2
+        x: 4248
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4042f371cf2ea426f8edfbe896bd8b2d
+      internalID: -412726894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_24
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078fd9d1052984b5dacca9931e5bb534
+      internalID: -844035576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_25
+      rect:
+        serializedVersion: 2
+        x: 5664
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f054a154e874f26a4f91f442966a22
+      internalID: 329046563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_26
+      rect:
+        serializedVersion: 2
+        x: 6372
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ecc449ddece4d7f85ade73eab367d5
+      internalID: 1616395271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_27
+      rect:
+        serializedVersion: 2
+        x: 7080
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219fcedda7a2645e2984a75c20820e7c
+      internalID: -1945499176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_28
+      rect:
+        serializedVersion: 2
+        x: 7788
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6938dee54424ec2829d102a60b3903
+      internalID: 1844464729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_29
+      rect:
+        serializedVersion: 2
+        x: 8496
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe93210aad9e84c10aebac022f357f93
+      internalID: -461174477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_30
+      rect:
+        serializedVersion: 2
+        x: 9204
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9235f5d065d45fabc4bab96ac020ce
+      internalID: -1453626238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_31
+      rect:
+        serializedVersion: 2
+        x: 9912
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8b6b33d87d24ede82c52d2a8dc6e25
+      internalID: -496747749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_32
+      rect:
+        serializedVersion: 2
+        x: 10620
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4c61d5160a44f949558ea065609fa0
+      internalID: -1580668176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_33
+      rect:
+        serializedVersion: 2
+        x: 11328
+        y: 895
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed81c84dbf7f419dada64809a89c1df
+      internalID: -599667448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb545045e7544b799d589c2c0921b94
+      internalID: -599607737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_35
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d0b8bbb28d74a398047daff9c11f64
+      internalID: 771866754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_36
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3afdf8eac0fb94004b284f3a9ba0291b
+      internalID: -396227578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_37
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85144ce3215c542949849c6a6b0ec769
+      internalID: 247720392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_38
+      rect:
+        serializedVersion: 2
+        x: 2832
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc97dcd830f340738ea847536e9e995
+      internalID: 224560418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_39
+      rect:
+        serializedVersion: 2
+        x: 3540
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5fc1a16edca4683a51c34232b007bc
+      internalID: 1983378497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_40
+      rect:
+        serializedVersion: 2
+        x: 4248
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47748103297c94b819bb067591674558
+      internalID: 576850490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_41
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9691604b5de91415faf9ceadbf5ea739
+      internalID: 1025074328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_42
+      rect:
+        serializedVersion: 2
+        x: 5664
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ee087a73a4343a4b1747a5aba90ecd
+      internalID: -1439736116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_43
+      rect:
+        serializedVersion: 2
+        x: 6372
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b84696cc4bcc4747b1edc0864441e92
+      internalID: -1135477191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_44
+      rect:
+        serializedVersion: 2
+        x: 7080
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733d34d8d78a94cb699d6fb042798541
+      internalID: 2064888620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_45
+      rect:
+        serializedVersion: 2
+        x: 7788
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b091c7a9cf0468d8d0503af50c411a
+      internalID: 953348470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_46
+      rect:
+        serializedVersion: 2
+        x: 8496
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3084646a1d80d47c99140bbc1face0fe
+      internalID: 264840266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_47
+      rect:
+        serializedVersion: 2
+        x: 9204
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef69d2514f594288b84c84370b3fb05
+      internalID: -1110999570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_48
+      rect:
+        serializedVersion: 2
+        x: 9912
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33397df384b884ef386625ddf6a21dbb
+      internalID: 363446015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_49
+      rect:
+        serializedVersion: 2
+        x: 10620
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ddabf30627be4f048fc575e2a8d9835
+      internalID: -1661565397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GettingReadySceneTutorial_50
+      rect:
+        serializedVersion: 2
+        x: 11328
+        y: 0
+        width: 708
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac1d99c76ad64377bc43408e22853ee
+      internalID: 122076169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +1197,58 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GettingReadySceneTutorial_0: -1354259192
+      GettingReadySceneTutorial_1: -410606369
+      GettingReadySceneTutorial_10: 528586181
+      GettingReadySceneTutorial_11: -580287048
+      GettingReadySceneTutorial_12: 2021694349
+      GettingReadySceneTutorial_13: 1044060346
+      GettingReadySceneTutorial_14: -1753302361
+      GettingReadySceneTutorial_15: -533143920
+      GettingReadySceneTutorial_16: -204785112
+      GettingReadySceneTutorial_17: 885996076
+      GettingReadySceneTutorial_18: 1048062033
+      GettingReadySceneTutorial_19: -1621680019
+      GettingReadySceneTutorial_2: 957720607
+      GettingReadySceneTutorial_20: -1399256091
+      GettingReadySceneTutorial_21: 1770537763
+      GettingReadySceneTutorial_22: 676473785
+      GettingReadySceneTutorial_23: -412726894
+      GettingReadySceneTutorial_24: -844035576
+      GettingReadySceneTutorial_25: 329046563
+      GettingReadySceneTutorial_26: 1616395271
+      GettingReadySceneTutorial_27: -1945499176
+      GettingReadySceneTutorial_28: 1844464729
+      GettingReadySceneTutorial_29: -461174477
+      GettingReadySceneTutorial_3: -2105037741
+      GettingReadySceneTutorial_30: -1453626238
+      GettingReadySceneTutorial_31: -496747749
+      GettingReadySceneTutorial_32: -1580668176
+      GettingReadySceneTutorial_33: -599667448
+      GettingReadySceneTutorial_34: -599607737
+      GettingReadySceneTutorial_35: 771866754
+      GettingReadySceneTutorial_36: -396227578
+      GettingReadySceneTutorial_37: 247720392
+      GettingReadySceneTutorial_38: 224560418
+      GettingReadySceneTutorial_39: 1983378497
+      GettingReadySceneTutorial_4: 1142957239
+      GettingReadySceneTutorial_40: 576850490
+      GettingReadySceneTutorial_41: 1025074328
+      GettingReadySceneTutorial_42: -1439736116
+      GettingReadySceneTutorial_43: -1135477191
+      GettingReadySceneTutorial_44: 2064888620
+      GettingReadySceneTutorial_45: 953348470
+      GettingReadySceneTutorial_46: 264840266
+      GettingReadySceneTutorial_47: -1110999570
+      GettingReadySceneTutorial_48: 363446015
+      GettingReadySceneTutorial_49: -1661565397
+      GettingReadySceneTutorial_5: -1173639129
+      GettingReadySceneTutorial_50: 122076169
+      GettingReadySceneTutorial_6: 1450187120
+      GettingReadySceneTutorial_7: 1098655404
+      GettingReadySceneTutorial_8: -583664447
+      GettingReadySceneTutorial_9: 895784665
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
