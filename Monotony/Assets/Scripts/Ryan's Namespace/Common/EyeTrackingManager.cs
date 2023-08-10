@@ -47,7 +47,7 @@ namespace RyansNamespace {
             }
 
             screenPos.z = -offset;
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenPos);
             visionLocation.position = new Vector3(worldPos.x, worldPos.y, 0f);
 
             int inverseDistance = 0;
