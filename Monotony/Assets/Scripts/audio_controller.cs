@@ -74,7 +74,6 @@ public class audio_controller : MonoBehaviour
         else {
             isLookingMult = -1;
         }
-        Debug.Log(SavePlayerData.monsterDistance);
         lerpValue += increment * Time.deltaTime * isLookingMult * Mathf.Clamp(SavePlayerData.monsterDistance,1,4);
         lerpValue = Mathf.Clamp(lerpValue, 0, 1);
         audioMixer.SetFloat("noiseVol", Mathf.Lerp(-80, maxNoiseVol, lerpValue));

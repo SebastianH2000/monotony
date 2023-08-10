@@ -7,7 +7,6 @@ public class Customer : MonoBehaviour
     private bool orderDelivered = false;
     private bool orderTaken = false;
 
-
     // Start is called before the first frame update
     protected virtual void Start()
     {

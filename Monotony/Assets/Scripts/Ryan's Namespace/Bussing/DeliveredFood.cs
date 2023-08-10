@@ -24,12 +24,14 @@ public class DeliveredFood : Drag
                 Customer customer = collider.GetComponent<Customer>();
                 if (customer.TakeFood(food)) {
                     Debug.Log("food taken");
+                    AppManager.instance.sfxManager.PlaySFX("fulfill_order_plate");
                     Tray.instance.ServedCustomer();
                     delivered = true;
                     OnMouseUp();
                     Destroy(gameObject, 0.1f);
                 } else {
                     Debug.Log("Wrong person!");
+                    AppManager.instance.sfxManager.PlaySFX("hmm_" + Random.Range(1, 5).ToString());
                 }
             }
         }

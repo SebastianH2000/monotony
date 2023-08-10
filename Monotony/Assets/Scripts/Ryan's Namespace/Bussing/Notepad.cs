@@ -1,4 +1,5 @@
 using System.Collections;
+using RyansNamespace;
 using UnityEngine;
 
 public class Notepad : MonoBehaviour
@@ -10,12 +11,16 @@ public class Notepad : MonoBehaviour
     public bool allCustomersServed { get; private set; }
 
     // Start is called before the first frame update
-    void Start() => customers = FindObjectsOfType<Customer>();
+    void Start() {
+        customers = FindObjectsOfType<Customer>();
+        AppManager.instance.sfxManager.PlaySFX("diner_ambience", 0.25f, true);
+    }
 
     public void HandleOrder(Food food, OrderButton orderButton) {
         foreach (Customer customer in customers) {
             if (customer.TakeOrder(food)) {
                 Debug.Log("Order taken!");
+                AppManager.instance.sfxManager.PlaySFX("pencil_" + Random.Range(1, 4).ToString());
                 Tray.instance.SpawnFood(food);
                 customersServed++;
 
@@ -30,7 +35,7 @@ public class Notepad : MonoBehaviour
             }
         }
         
-        Debug.Log("Order not taken!");
+        AppManager.instance.sfxManager.PlaySFX("hmm_" + Random.Range(1, 5).ToString());
     }
 
     private IEnumerator MoveOutOfFrame() {
