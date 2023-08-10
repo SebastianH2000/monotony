@@ -42,6 +42,7 @@ public class audio_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*isLookingAtMonster = SavePlayerData.lookingAtMonster;
         if (!wasLooking && isLookingAtMonster)
         {
             
@@ -53,7 +54,7 @@ public class audio_controller : MonoBehaviour
 
             wasLooking = true;
         }
-        if(wasLooking && !SavePlayerData.lookingAtMonster)
+        if(wasLooking && !isLookingAtMonster)
         {
             audioMixer.GetFloat(lowpass, out curLowpass);
             StartCoroutine(LerpMixerValue(curLowpass, lowPassNormalValue, lowpass, !isLookingAtMonster));
