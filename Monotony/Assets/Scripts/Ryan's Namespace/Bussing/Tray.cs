@@ -4,11 +4,23 @@ using UnityEngine;
 
 public class Tray : MonoBehaviour
 {
+    public static Tray instance { get; private set;}
+
     [SerializeField] private GameObject[] foods;
     [SerializeField] private List<Transform> spawnPoints;
     private Dictionary<string, GameObject> foodDict = new Dictionary<string, GameObject>();
     [SerializeField] private Transform servePos;
     [SerializeField] private float speed;
+    private Customer[] customers;
+    private int customersServed = 0;
+
+    private void Awake() {
+        if (instance == null) {
+            instance = this;
+        } else if (instance != this) {
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +44,18 @@ public class Tray : MonoBehaviour
         instance.transform.localPosition = spawnPoints[randomIndex].localPosition;
         instance.transform.localRotation = Quaternion.identity;
         spawnPoints.RemoveAt(randomIndex);
+    }
+
+    public void ServedCustomer() {
+        customersServed++;
+
+        if (customersServed >= customers.Length) {
+            GameObject.Find("FadeOut").GetComponent<FadeOut>().isFading = true;
+        }
+    }
+
+    public void SetCustomers(Customer[] customers) {
+        this.customers = customers;
     }
 
     public IEnumerator MoveToServePosition() {

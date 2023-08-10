@@ -23,7 +23,7 @@ namespace SebastiansNamespace
             changingTimer = 0;
             textSelections[Random.Range(0,textSelections.Length)] = 1f;
             //taskArray = new string[4] {"GettingReady","Class","Grocery","Web"};
-            taskArray = new string[5] {"GettingReady","Class","Grocery","Bussing","Web"};
+            taskArray = new string[6] {"GettingReady","Class","Grocery","Bussing","Web","NextDay"};
             for (int i = 0; i < SavePlayerData.completedArray.Length; i++) {
                 SavePlayerData.completedArray[i] = false;
             }
@@ -125,6 +125,9 @@ namespace SebastiansNamespace
             }
             else if (inputString == "Bussing") {
                 return 5;
+            }
+            else if (inputString == "NextDay") {
+                return 9;
             }
             else {
                 return 8;

@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Notepad : MonoBehaviour
 {
-    [SerializeField] private Tray tray;
     [SerializeField] private Transform outOfFramePos;
     [SerializeField] private float speed;
     private Customer[] customers;
@@ -17,7 +16,7 @@ public class Notepad : MonoBehaviour
         foreach (Customer customer in customers) {
             if (customer.TakeOrder(food)) {
                 Debug.Log("Order taken!");
-                tray.SpawnFood(food);
+                Tray.instance.SpawnFood(food);
                 customersServed++;
 
                 if (customersServed >= customers.Length) {
@@ -42,7 +41,8 @@ public class Notepad : MonoBehaviour
 
         transform.position = outOfFramePos.position;
 
-        StartCoroutine(tray.MoveToServePosition());
+        Tray.instance.SetCustomers(customers);
+        StartCoroutine(Tray.instance.MoveToServePosition());
     }
 }
 

@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/GroceryScene.unity
     guid: 801df133f017945b4a402fcc66fa317f
   - enabled: 1
+    path: Assets/Scenes/BussingScene.unity
+    guid: bf0bb1048af84422b92d8964e9ef3485
+  - enabled: 1
     path: Assets/Scenes/Web Scene/WebScene.unity
     guid: cb9962b4ca06f364a8cd44c604df28e6
   - enabled: 1
@@ -29,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TryAgainScene.unity
     guid: 0c363a99e6fcf3d45bfdc93fcb6074fa
+  - enabled: 1
+    path: Assets/Scenes/NextDayScene.unity
+    guid: c9f1b2966e6549f42b76f4a6128c9fe4
   m_configObjects: {}

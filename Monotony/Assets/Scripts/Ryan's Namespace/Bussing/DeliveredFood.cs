@@ -24,6 +24,7 @@ public class DeliveredFood : Drag
                 Customer customer = collider.GetComponent<Customer>();
                 if (customer.TakeFood(food)) {
                     Debug.Log("food taken");
+                    Tray.instance.ServedCustomer();
                     delivered = true;
                     OnMouseUp();
                     Destroy(gameObject, 0.1f);
