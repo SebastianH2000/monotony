@@ -34,7 +34,7 @@ namespace RyansNamespace {
 
             //GazePoint gazePoint = TobiiAPI.GetGazePoint();
             //if (gazePoint.IsValid && GameObject.Find("IntroCard"))
-            if (true && GameObject.Find("IntroCard"))
+            if (true)
             {
                 //Vector3 screenPos = gazePoint.Screen;
                 //screenPos.z = -offset;
@@ -60,6 +60,9 @@ namespace RyansNamespace {
                     Debug.Log(returnDist);
                     //float distance = Vector2.Distance(worldPos, collider.transform.positon);
                     SavePlayerData.sanity = Mathf.Clamp(SavePlayerData.sanity - (Time.deltaTime / 30f * (returnDist)), 0f, 1f);
+                    if (SavePlayerData.sanity <= 0) {
+                        GameObject.Find("FadeOut").GetComponent<FadeOut>().isFading = true;
+                    }
                     SavePlayerData.lookingAtMonster = true;
                     return;
                 }

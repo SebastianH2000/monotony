@@ -26,7 +26,16 @@ public class FadeOut : MonoBehaviour
             else {
                 fadeTimer += Time.deltaTime;
             }
-            blackSquare.GetComponent<SpriteRenderer>().color = new Color(0,0,0,Mathf.Lerp(0,1,fadeTimer));
+            if (!SavePlayerData.isDead) {
+                blackSquare.GetComponent<SpriteRenderer>().color = new Color(0,0,0,Mathf.Lerp(0,1,fadeTimer));
+            }
+        }
+        else if (isFading && fadeTimer >= 1f && SavePlayerData.isDead) {
+            SceneManager.LoadScene("MainMenuScene");
+        }
+        else if (isFading && fadeTimer >= 1f && SavePlayerData.sanity <= 0) {
+            SavePlayerData.isDead = true;
+            SceneManager.LoadScene("OutroVideo");
         }
         else if (isFading && fadeTimer >= 1f && changeScene) {
             if (SceneManager.GetActiveScene().name != "MainMenuScene") {

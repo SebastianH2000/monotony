@@ -28,18 +28,17 @@ public class video_control : MonoBehaviour
 
     void changeScene(VideoPlayer vp)
     {
-        /*SceneManager.LoadScene("WebScene");
-        SavePlayerData.lastTask = SavePlayerData.currentTask;
-        SavePlayerData.currentTask = SavePlayerData.nextTask;
-        SavePlayerData.nextTask = "Class";
-        SavePlayerData.menuOpen = false;*/
         GameObject.Find("FadeOut").GetComponent<FadeOut>().isFading = true;
         StartCoroutine(fadeTimer());
-        //SceneManager.LoadScene("WebScene");//the scene that you want to load after the video has ended.
     }
    
     IEnumerator fadeTimer() {
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("GettingReadyScene");
+        if (SavePlayerData.isDead) {
+            SceneManager.LoadScene("TryAgainScene");
+        }
+        else {
+            SceneManager.LoadScene("GettingReadyScene");
+        }
     }
 }
