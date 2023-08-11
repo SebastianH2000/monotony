@@ -11,7 +11,6 @@ namespace SebastiansNamespace {
         public static float time;
         public static int taskNumber = 0;
 
-        public static string lastTask = "Menu";
         public static string currentTask = "Menu";
         public static string nextTask = "GettingReady";
         public static bool menuOpen = true;

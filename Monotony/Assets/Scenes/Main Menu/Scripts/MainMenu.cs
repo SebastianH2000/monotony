@@ -72,18 +72,21 @@ namespace SebastiansNamespace
         }
         public void nextScene() {
             if (!SavePlayerData.hasWatchedIntro) {
-                SavePlayerData.taskNumber++;
-                SavePlayerData.lastTask = SavePlayerData.currentTask;
-                SavePlayerData.currentTask = SavePlayerData.nextTask;
-                SavePlayerData.nextTask = taskArray[SavePlayerData.taskNumber];
+                /*SavePlayerData.taskNumber++;
+                SavePlayerData.currentTask = "Menu";
+                SavePlayerData.nextTask = "Class";
                 SavePlayerData.menuOpen = false;
                 SavePlayerData.hasWatchedIntro = true;
-                SceneManager.LoadScene("IntroVideo");
+                SceneManager.LoadScene("IntroVideo");*/
+                SavePlayerData.taskNumber = 5;
+                SavePlayerData.currentTask = "Menu";
+                SavePlayerData.nextTask = "Web";
+                SavePlayerData.menuOpen = false;
+                SavePlayerData.hasWatchedIntro = true;
+                SceneManager.LoadScene("WebScene");
             }
             else if (SavePlayerData.taskNumber < 5){
                 Debug.Log(SavePlayerData.nextTask);
-                Debug.Log(SavePlayerData.nextTask);
-                SavePlayerData.lastTask = SavePlayerData.currentTask;
                 SavePlayerData.currentTask = SavePlayerData.nextTask;
                 SavePlayerData.menuOpen = false;
                 SavePlayerData.taskNumber++;

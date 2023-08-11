@@ -18,14 +18,14 @@ public class TryAgain : MonoBehaviour
     }
 
     void OnMouseDown() {
-        SavePlayerData.sanity = 1f;
+        SavePlayerData.sanity += 0.5f;
+        SavePlayerData.sanity = Mathf.Clamp(SavePlayerData.sanity, 0, 1);
         SavePlayerData.lookingAtMonster = false;
         SavePlayerData.monsterDistance = 0;
         SavePlayerData.day = 1;
         SavePlayerData.time = 0;
         SavePlayerData.taskNumber = 0;
 
-        SavePlayerData.lastTask = "Menu";
         SavePlayerData.currentTask = "Menu";
         SavePlayerData.nextTask = "GettingReady";
         SavePlayerData.menuOpen = true;
