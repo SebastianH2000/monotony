@@ -684,8 +684,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -754,6 +754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7660289151304284560}
   - component: {fileID: 9037308787471979793}
+  - component: {fileID: 7398545036836043896}
   m_Layer: 3
   m_Name: SceneUI
   m_TagString: Untagged
@@ -807,6 +808,19 @@ MonoBehaviour:
   transitionDuration: 0.5
   maxNoiseVol: 6.3
   isLookingAtMonster: 1
+--- !u!114 &7398545036836043896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8377058969736021232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3151f00293ff2df43b4b828db334750c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dayTracker: {fileID: 6780600277954552620}
 --- !u!1001 &5405605895108404539
 PrefabInstance:
   m_ObjectHideFlags: 0

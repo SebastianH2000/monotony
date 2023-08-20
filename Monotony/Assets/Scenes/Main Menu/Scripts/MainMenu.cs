@@ -23,7 +23,7 @@ namespace SebastiansNamespace
             changingTimer = 0;
             textSelections[Random.Range(0,textSelections.Length)] = 1f;
             //taskArray = new string[4] {"GettingReady","Class","Grocery","Web"};
-            taskArray = new string[6] {"GettingReady","Class","Grocery","Bussing","Web","NextDay"};
+            taskArray = new string[7] {"GettingReady","Class","Bussing","Grocery","Web","NextDay","Placeholder"};
             for (int i = 0; i < SavePlayerData.completedArray.Length; i++) {
                 SavePlayerData.completedArray[i] = false;
             }
@@ -72,20 +72,14 @@ namespace SebastiansNamespace
         }
         public void nextScene() {
             if (!SavePlayerData.hasWatchedIntro) {
-                /*SavePlayerData.taskNumber++;
+                SavePlayerData.taskNumber++;
                 SavePlayerData.currentTask = "Menu";
                 SavePlayerData.nextTask = "Class";
                 SavePlayerData.menuOpen = false;
                 SavePlayerData.hasWatchedIntro = true;
-                SceneManager.LoadScene("IntroVideo");*/
-                SavePlayerData.taskNumber = 5;
-                SavePlayerData.currentTask = "Menu";
-                SavePlayerData.nextTask = "Web";
-                SavePlayerData.menuOpen = false;
-                SavePlayerData.hasWatchedIntro = true;
-                SceneManager.LoadScene("WebScene");
+                SceneManager.LoadScene("IntroVideo");
             }
-            else if (SavePlayerData.taskNumber < 5){
+            else if (SavePlayerData.taskNumber < 6){
                 Debug.Log(SavePlayerData.nextTask);
                 SavePlayerData.currentTask = SavePlayerData.nextTask;
                 SavePlayerData.menuOpen = false;

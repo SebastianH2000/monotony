@@ -46,6 +46,7 @@ namespace SebastiansNamespace {
         // Start is called before the first frame update
         void Start()
         {
+
             //work email subjects
             workSubjects.Add("Can you come to work tomorrow?");
             workSubjects.Add("Take over my shift tomorrow");

@@ -168,7 +168,7 @@ namespace SebastiansNamespace {
                                 if (check3.GetComponent<SpriteRenderer>().enabled) {
                                     check3.GetComponent<Checkbox>().On();
                                 }
-                                if (slideShownList.Count > 3) {
+                                if (slideShownList.Count > 4) {
                                     waitingForTeacher = true;
                                 }
                                 else {

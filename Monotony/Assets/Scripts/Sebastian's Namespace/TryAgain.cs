@@ -18,8 +18,7 @@ public class TryAgain : MonoBehaviour
     }
 
     void OnMouseDown() {
-        SavePlayerData.sanity += 0.5f;
-        SavePlayerData.sanity = Mathf.Clamp(SavePlayerData.sanity, 0, 1);
+        SavePlayerData.sanity = 1f;
         SavePlayerData.lookingAtMonster = false;
         SavePlayerData.monsterDistance = 0;
         SavePlayerData.day = 1;

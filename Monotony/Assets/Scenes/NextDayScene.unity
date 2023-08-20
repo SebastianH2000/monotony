@@ -502,7 +502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 50}
+  m_AnchoredPosition: {x: 0, y: -11}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &862352517
@@ -525,7 +525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NEXT DAY LOLOLOLOL
+  m_text: NEXT DAY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5394a74817cfb084ea35be65edb01265, type: 2}
   m_sharedMaterial: {fileID: -3809472776744708358, guid: 5394a74817cfb084ea35be65edb01265, type: 2}
@@ -692,7 +692,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 891410726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75c0e8f3995992746ac7b1d61ab19ce1, type: 3}
+  m_Script: {fileID: 11500000, guid: 737f75dd0b3d65e48aba948b3b1a958b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1497117348
