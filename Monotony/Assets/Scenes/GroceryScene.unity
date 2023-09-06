@@ -953,11 +953,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447438920112109166, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 2447438920112109166, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 2447438920112109166, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
       propertyPath: m_LocalPosition.x
@@ -965,7 +965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2447438920112109166, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.66
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 3228022523119813140, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1025,11 +1025,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7086083988599373626, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 7086083988599373626, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 7086083988599373626, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1037,7 +1037,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7086083988599373626, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.74
+      value: 0.692
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173877189184081246, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7173877189184081246, guid: 0ef1b84f7691c72428045fe5c367b166, type: 3}
       propertyPath: m_SortingLayer
