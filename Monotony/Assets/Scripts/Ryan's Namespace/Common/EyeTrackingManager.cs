@@ -36,7 +36,9 @@ namespace RyansNamespace {
                 screenPos = Input.mousePosition;
             } else {
                 if (!isConnected || TobiiAPI.GetUserPresence() != UserPresence.Present)
-                    return;
+                    //return;
+                    screenPos = Input.mousePosition;
+
 
                 GazePoint gazePoint = TobiiAPI.GetGazePoint();
                 if (gazePoint.IsValid) {
